@@ -1,10 +1,9 @@
+/* this css file is encoded with UTF-8 */
 body {margin: none; padding: none;} .navigation {display: flex;  align-items: center; height: 100px; max-height: 100px; background-color: black; padding-left:80px;} .image {color: white;}
 .link_container {display: block; margin-left: 950px;} .mobile_hamburger {display: block; color: white;} .links {display: inline-block;} .links ul {display: inline-block; list-style-type: none; padding: 0;}
 .links li {display: inline-block; margin-left: 53px;} .normalnavlinks {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} .normalnavlinks:hover {cursor: default; text-decoration: underline; color:rgb(255,255,255)}
 .ddcontent {display: none; position: absolute; background-color: black; min-width: 180px; box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.4); z-index: 1;} .ddcontent a {color: white; padding: 8px 28px; text-decoration: none; display: block; font-family: "Roboto", sans-serif;} .ddcontent a:hover {background-color: rgb(24, 24, 24)}
 .dropdown:hover .ddcontent {display: block;} #downloadlink {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} #downloadlink:hover {cursor: pointer; color: rgb(255,255,255); text-decoration:underline;}
-
-
 
 
 
