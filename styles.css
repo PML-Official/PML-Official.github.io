@@ -1,4 +1,3 @@
-/* this css file is encoded with UTF-8 */
 body {margin: 0 !important; padding: 0; max-width: 100%;} .navigation {display: flex;  align-items: center; height: 100px; max-height: 100px; background-color: black; padding-left:80px;} .image {color: white;}
 .link_container {display: block; margin-left: 55%;} .mobile_hamburger {display: block; color: white;} .links {display: inline-block;} .links ul {display: inline-block; list-style-type: none; padding: 0;}
 .links li {display: inline-block; margin-left: 53px;} .normalnavlinks {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} .normalnavlinks:hover {cursor: default; text-decoration: underline; color:rgb(255,255,255)}
