@@ -8,7 +8,7 @@ PMLlanguage.com is a website created by two 13 year old devolopers from Atlanta 
 
 ## Features
 
-- **pmllanguage.com** is a custom coded website using (obvously) HTMl, CSS, JS, and PHP
+- **pmllanguage.com** is a custom coded website using (obvously) HTMl, CSS, JavaScript, and Markdown
 - All Graphic design is custom including PML Logo and images
 
 ## PDF Markup Language
