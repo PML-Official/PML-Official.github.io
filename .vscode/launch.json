@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "https://stashey13.github.io",
+            "url": "file:///Users/asherlessem/Desktop/stashey13.github.io/stashey13.github.io/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
