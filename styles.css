@@ -5,7 +5,7 @@ body {margin: 0 !important; padding: 0; max-width: 100%;} .navigation {display: 
 .dropdown:hover .ddcontent {display: block;} #downloadlink {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} #downloadlink:hover {cursor: pointer; color: rgb(255,255,255); text-decoration:underline;}
 .navlogo {max-height: 100px; height: 100px; margin-left: 80px} 
 /* mobile nav */
-#mobile-nav {width: 100%; background-color: black; height: 100%; display:block; margin-top: 5px; display: none;} #mobile-nav ul {list-style-type: none;} #mobile-nav ul li {padding-top: 20px; padding-bottom: 20px;} #mobile-nav ul li a {color: white; text-decoration: none; font-family: "Roboto", sans-serif;} #mobile-nav ul li a:hover {text-decoration: underline;}
+#mobile-nav {width: 100%; background-color: black; height: 100%; margin-top: 5px; display: none;} #mobile-nav ul {list-style-type: none;} #mobile-nav ul li {padding-top: 20px; padding-bottom: 20px;} #mobile-nav ul li a {color: white; text-decoration: none; font-family: "Roboto", sans-serif;} #mobile-nav ul li a:hover {text-decoration: underline;}
 
 
 /* construction area */
