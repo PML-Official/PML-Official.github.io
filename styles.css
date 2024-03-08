@@ -1,4 +1,4 @@
-body {margin: 0 !important; padding: 0; max-width: 100%;} .navigation {display: flex;  align-items: center; height: 100px; max-height: 100px; background-color: black;} .image {color: white; }
+body {margin: 0 !important; padding: 0; max-width: 100%;} .navigation {display: flex;  align-items: center; height: 100px; max-height: 100px; background-color: black; position: fixed;} .image {color: white; }
 .link_container {display: block; margin-left: 55%;} .mobile_hamburger {display: none; color: white; margin-left: 60%;} .material-symbols-outlined {font-size: 40px; cursor: pointer;} .links {display: inline-block;} .links ul {display: inline-block; list-style-type: none; padding: 0;}
 .links li {display: inline-block; margin-left: 53px;} .normalnavlinks {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} .normalnavlinks:hover {cursor: default; text-decoration: underline; color:rgb(255,255,255)}
 .ddcontent {display: none; position: absolute; background-color: black; min-width: 180px; box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.4); z-index: 1;} .ddcontent a {color: white; padding: 8px 28px; text-decoration: none; display: block; font-family: "Roboto", sans-serif;} .ddcontent a:hover {background-color: rgb(24, 24, 24)}
@@ -23,6 +23,6 @@ body {margin: 0 !important; padding: 0; max-width: 100%;} .navigation {display: 
 /* navigation - landscape 2 */
 @media only screen and (min-width: 550px) and (max-width: 669px) {.mobile_hamburger {display: block; margin-left: 58%;} .link_container {display: none;} .navlogo {margin-left: 58px;}}
 /* navigation - landscape 3 */
-@media only screen and (min-width: 100px) and (max-width: 549px) {.mobile_hamburger {display: block; margin-left: 50%;} .link_container {display: none;} .navlogo {margin-left: 40px;}}
+@media only screen and (min-width: 100px) and (max-width: 549px) {.mobile_hamburger {display: block; margin-left: 48%;} .link_container {display: none;} .navlogo {margin-left: 5%;}}
 /* navigation- landscape 4 */
 @media only screen and (min-width: 1px) and (max-width: 99) {.mobile_hamburger {display: block; margin-left: 48%;} .link_container {display: none;} .navlogo {margin-left: 40px;}}
