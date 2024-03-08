@@ -23,6 +23,6 @@ body {margin: 0 !important; padding: 0; max-width: 100%;} .navigation {display: 
 /* navigation - landscape 2 */
 @media only screen and (min-width: 550px) and (max-width: 669px) {.mobile_hamburger {display: block; margin-left: 58%;} .link_container {display: none;} .navlogo {margin-left: 58px;} #mobile-nav {display: none;}}
 /* navigation - landscape 3 */
-@media only screen and (min-width: 100px) and (max-width: 549px) {.mobile_hamburger {display: block; margin-left: 50%;} .link_container {display: none;} .navlogo {margin-left: 40px;} #mobile-nav {display: block;}}
+@media only screen and (min-width: 100px) and (max-width: 549px) {.mobile_hamburger {display: block; margin-left: 50%;} .link_container {display: none;} .navlogo {margin-left: 40px;} #mobile-nav {display: none;}}
 /* navigation- landscape 4 */
 @media only screen and (min-width: 1px) and (max-width: 99) {.mobile_hamburger {display: block; margin-left: 48%;} .link_container {display: none;} .navlogo {margin-left: 40px;} #mobile-nav {display: block;}}
