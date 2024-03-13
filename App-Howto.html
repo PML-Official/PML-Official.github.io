@@ -1,4 +1,110 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>PML App - User Guides</title>
+    <!--meta-->
+    <meta charset="utf-8">
+    <meta name="description" content="PML Language - Easly Create Pro PDFs in Minutes by Coding with PDF Markup Language">
+    <meta name="keywords" content="PML, PML Language, Coding, PDF Coding, PDF Markup Language">
+    <meta name="author" content="Stashey13 & LukeWhite32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta rel="canonical" href="https://stashey13.github.io">
+    <!--socail meta-->
+    <meta property="og:title" content="PML Language - Easly Create Pro PDFs in Minutes">
+    <meta property="og:description" content="PML Language - Easly Create Pro PDFs in Minutes by Coding with PDF Markup Language">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://stashey13.githubpages.io">
+    <meta property="og:type" content="website">
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="./PML White.png">
     
-</html>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-56N58LVR26"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-56N58LVR26');
+</script>
+</head>
+<body>
+    <section>
+    <div class="construction"><b>This site is currently under construction &#x002d; please pardon the mess &#x003A;&#41;</b><a id="constructionlink" href="https://github.com/Stashey13/stashey13.github.io"><button class="constructionbutton">Learn more</button></a></div><script>const link = document.getElementById('constructionlink');link.addEventListener('click', function(event) {event.preventDefault();window.open(link.href, '_blank'); });</script>
+    </section>     
+        <nav class="navigation">
+        <span class="image"><a href="https://stashey13.github.io"><img class="navlogo" alt="PML Logo" src="./PML White.png"></a></span>
+        <div class="mobile_hamburger" onclick="toggleBlock()"><span class="material-symbols-outlined" id="menu-icon">menu</span><span class="material-symbols-outlined" id="close-icon" style="display: none !important;">close</span></div>
+        <div class="link_container">
+            <div class="links">
+                <ul>
+                    <li class="dropdown">
+                        <a class="normalnavlinks" href="https://stashey13.github.io">About</a>
+                        <div class="ddcontent">
+                            <a href="./AboutPML.html">Learn About PML</a>
+                            <a href="./AboutCreators.html">Meet the Creators</a>
+                            <a href="./Tutorals.html">Tutorals</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="normalnavlinks" href="https://stashey13.github.io">PML App</a>
+                        <div class="ddcontent">
+                            <a href="./PML-App.html">About the App</a>
+                            <a href="./App-Howto.html">How to Use</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="downloadlink" href="Download.html">Download The App</a>
+                    </li>
+                </ul>
+            </div>
+        </div>   
+    </nav>
+       
+    <!--Mobile Hamburger Area-->
+    <div id="mobile-nav" style="display: block !important;">
+            <ul>
+                <a href="./AboutPML.html">
+                <li>
+                    <a href="./AboutPML.html">Learn About PML</a>
+                </li>
+                </a>
+                <a href="./AboutCreators.html">
+                <li>
+                    <a href="./AboutCreators.html">Meet the Creators</a>
+                </li>
+                </a>
+                <a href="./Tutorals.html"> 
+                <li>
+                    <a href="./Tutorals.html">Tutorals</a>
+                </li>
+                </a>
+                <a href="./PML-App.html">
+                <li>
+                    <a href="./PML-App.html">About the App</a>
+                </li>
+                </a>
+                <a href="./App-Howto.html">
+                <li>
+                    <a href="./App-Howto.html">How to Use</a>
+                </li>
+                </a>
+                <a href="Download.html">
+                <li>
+                    <a href="Download.html">Download The App</a>
+                </li>
+                </a>
+            </ul>
+    </div>  
+
+    <!--Show mobile nav links when icon clicked-->
+<script>document.addEventListener("DOMContentLoaded", function(event) {var mobileNav = document.getElementById('mobile-nav');mobileNav.classList.add('hidden');});function toggleBlock() {var menuIcon = document.getElementById('menu-icon');var closeIcon = document.getElementById('close-icon');var mobileNav = document.getElementById('mobile-nav');if (mobileNav.classList.contains('hidden')) {mobileNav.classList.remove('hidden');mobileNav.classList.add('visible');menuIcon.style.display = 'none';closeIcon.style.display = 'inline';} else {mobileNav.classList.remove('visible');mobileNav.classList.add('hidden');menuIcon.style.display = 'inline';closeIcon.style.display = 'none';}}</script>
