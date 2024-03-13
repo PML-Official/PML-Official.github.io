@@ -1,23 +1,28 @@
-body {margin: 0 !important; padding: 0; max-width: 100%;} .navigation {display: flex; transition: height 0.2s; position: sticky; top: 0; position: -webkit-sticky; min-width: 100%; align-items: center; height: 100px; max-height: 100px; background-color: black; margin-bottom: 0 !important;} .image {color: white; }
+body {margin: 0 !important; padding: 0; max-width: 100%;} .navigation {display: flex; transition: height 0.2s; position: sticky; top: 0; position: -webkit-sticky; min-width: 100%; z-index: 9999; align-items: center; height: 100px; max-height: 100px; background-color: black; margin-bottom: 0 !important;} .image {color: white; }
 .link_container {display: block; margin-left: 55%;} .mobile_hamburger {display: none; color: white; margin-left: 60%;} .material-symbols-outlined {font-size: 40px; cursor: pointer;} .links {display: inline-block;} .links ul {display: inline-block; list-style-type: none; padding: 0;}
 .links li {display: inline-block; margin-left: 53px;} .normalnavlinks {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} .normalnavlinks:hover {cursor: default; text-decoration: underline; color:rgb(255,255,255)}
 .ddcontent {display: none; position: absolute; background-color: black; min-width: 180px; box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.4); z-index: 1;} .ddcontent a {color: white; padding: 8px 28px; text-decoration: none; display: block; font-family: "Roboto", sans-serif;} .ddcontent a:hover {background-color: rgb(24, 24, 24)}
 .dropdown:hover .ddcontent {display: block;} #downloadlink {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} #downloadlink:hover {cursor: pointer; color: rgb(255,255,255); text-decoration:underline;}
-.navlogo {max-height: 100px; height: 100px; margin-left: 80px; transition: height 0.2s;}
+.navlogo {max-height: 100px; height: 100px; margin-left: 80px; transition: height 0.2s;} .banner-button {background-color: red; padding: 13px; padding-left: 22px; padding-right: 22px; color: white; border: none; border-radius: 5px; font-size: 1.3rem;}
 /* mobile nav */
 #mobile-nav {width: 100%; background-color: black; height: 42%; z-index: 9999; display: none; visibility: hidden; position: absolute; margin-top: 2px; transition: opacity 0.2s ease; margin-left: 0px !important; padding: 0 !important;} #mobile-nav ul {list-style-type: none;} #mobile-nav ul li {padding-top: 20px; padding-bottom: 20px; width: 100%; margin-left: 0px;} #mobile-nav ul li a {color: white; text-decoration: none; font-family: "Roboto", sans-serif; margin-left: 10px;} #mobile-nav ul li:hover {background-color:rgb(37, 37, 37); cursor: pointer; }
 #mobile-nav.hidden {opacity: 0;} #mobile-nav.visible {opacity: 1;} 
 
 /* construction area */
 .construction {width:100%; box-sizing: border-box; max-width: 100%; display:flex; height: 40px; padding: 6px; display: inline-block; background-color: rgb(253, 240, 216); text-align: center; font-family: "Roboto", sans-serif; text-decoration: none;}
-.constructionbutton {padding: 6px; border: none; margin-left: 12px; background-color: rgb(66, 24, 194); color: white; text-decoration:none; border-radius: 10px; } .constructionbutton:hover {background-color:  rgba(101, 57, 231, 0.554); cursor: pointer; color: black;}
+.constructionbutton  {padding: 6px !important; border: none !important; margin-left: 12px !important; background-color: rgb(66, 24, 194) !important; color: white !important; text-decoration:none !important; border-radius: 10px !important; } .constructionbutton:hover {background-color:  rgba(101, 57, 231, 0.554); cursor: pointer; color: black;}
 .testdiv {height: 4000px; width: 80%; background-color: aqua; z-index: 1;}
+
+/* banner image */
+.banner-image1 {width: 100%; height: auto; display: block; position: relative; z-index: -1;} .banner-image-contain {width: 100%;} .banner-button {position: absolute; z-index: 1; margin-top:53%;} #banner-button-contain {display: flex; align-items: center; justify-content: center; width: 100;}
+.banner-button {background-color: rgba(255, 0, 0, 0.894); padding: 13px; padding-left: 22px; padding-right: 22px; width: 200px; height: 50px; color: rgb(238, 238, 238); border: none; border-radius: 10px; font-size: 1.3rem; transition: 0.3s; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)} .banner-button:hover { cursor: pointer; color: rgb(255, 255, 255); box-shadow:none;}
+.banner-image2 {width: 100%; height: auto; display: none; position: relative; z-index: -1;}
 
 
 /* ipad landscape */
-@media only screen and (max-width: 1500px) and (min-width: 1101px) { .link_container {display: block; margin-left: 42%} }
+@media only screen and (max-width: 1500px) and (min-width: 1101px) { .link_container {display: block; margin-left: 42%}}
 /* for ipad landscape small */
-@media only screen and (max-width: 1100px) and (min-width: 900px) { .link_container {display: block; margin-left: 30%} }
+@media only screen and (max-width: 1100px) and (min-width: 900px) { .link_container {display: block; margin-left: 30%} .banner-image1 {display: none; visibility: hidden;} .banner-image2 {display: block;}}
 /* navigation -landscape 1 */
 @media only screen and (max-width: 899px) and (min-width: 670px) { .link_container {display: none;} .mobile_hamburger {display: block; } .navlogo {margin-left: 60px;} #mobile-nav {display: block; visibility: visible;}}
 /* navigation - landscape 2 */
