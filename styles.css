@@ -17,7 +17,7 @@ body {margin: 0 !important; padding: 0; max-width: 100%;} .navigation {display: 
 .banner-image1 {width: 100%; height: auto; display: block; position: relative; z-index: -1;} .banner-image-contain {width: 100%;} .banner-button {position: absolute; z-index: 1; margin-top:53%;} #banner-button-contain {display: flex; align-items: center; justify-content: center; width: 100;}
 .banner-button {background-color: rgba(255, 0, 0, 0.894); padding: 13px; padding-left: 22px; padding-right: 22px; width: 200px; height: 50px; color: rgb(238, 238, 238); border: none; border-radius: 10px; font-size: 1.3rem; transition: 0.3s; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)} .banner-button:hover { cursor: pointer; color: rgb(255, 255, 255); box-shadow:none;}
 .banner-image2 {width: 100%; height: auto; display: none; position: relative; z-index: -1;}
-
+/* lets see if it works this time */
 
 /* ipad landscape */
 @media only screen and (max-width: 1500px) and (min-width: 1101px) { .link_container {display: block; margin-left: 42%}}
