@@ -8,7 +8,7 @@ PMLlanguage.com is a website created by two 13 year old devolopers from Atlanta 
 
 ## Features
 
-- **pmllanguage.com** is a custom coded website using (obvously) HTMl, CSS, JavaScript, and Markdown
+- **pmllanguage.com** is a custom coded website using (obvously) HTML, CSS, JavaScript, and Markdown
 - All Graphic design is custom including PML Logo and images
 
 ## PDF Markup Language
@@ -23,8 +23,8 @@ Contributions to PMLlanguage.com are welcome! If you have suggestions or bug rep
 
 ## Resources
 
-- Website:  https://stashey13.github.io
-- GitHub Repository: https://github.com/Stashey13/stashey13.github.io
+- Website:  https://PML-Official.github.io
+- GitHub Repository: https://github.com/PML-Official/PML-Official.github.io
 
 ## Support
 
