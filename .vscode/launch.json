@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "/Users/asherlessem/Desktop/stashey13.github.io/stashey13.github.io/index.html"
+            "file": "/Users/asherlessem/Desktop/PML-Official.github.io/index.html"
         }
     ]
 }

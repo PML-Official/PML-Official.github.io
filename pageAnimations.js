@@ -1,29 +1,29 @@
-
+/*
 // Function to check if an element is in the viewport
-//function isInViewport(element) {
-  //  const rect = element.getBoundingClientRect();
-  //  return (
-  //    rect.top >= 0 &&
-  //    rect.left >= 0 &&
-    //  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      //rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//    );
-//  }
+function isInViewport(element) {
+   const rect = element.getBoundingClientRect();
+   return (
+     rect.top >= 0 &&
+     rect.left >= 0 &&
+     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
   
   // Function to handle scroll event
-//  function handleScroll() {
-//    const animatedBlock = document.getElementById('animatedBlock');
-//    if (isInViewport(animatedBlock)) {
- //     animatedBlock.classList.add('animated');
+ function handleScroll() {
+    const animatedBlock = document.getElementById('animatedBlock');
+    if (isInViewport(animatedBlock)) {
+      animatedBlock.classList.add('animated');
       // Remove the scroll event listener once the animation is triggered
- //     window.removeEventListener('scroll', handleScroll);
-//    }
-//  }
+     window.removeEventListener('scroll', handleScroll);
+    }
+  }
   
   // Add scroll event listener
-//  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', handleScroll);
   
-
+*/
 
 
 
@@ -46,3 +46,24 @@
 
  window.addEventListener('scroll', toggleNavigationAndLogo);
 
+ // Mobile Nav
+  var mobileNav = document.getElementById('mobile-nav');
+  mobileNav.classList.add('hidden');
+ 
+  
+  function toggleBlock() {
+      var menuIcon = document.getElementById('menu-icon');
+      var closeIcon = document.getElementById('close-icon');
+      var mobileNav = document.getElementById('mobile-nav');
+          if (mobileNav.classList.contains('hidden')) {
+                  mobileNav.classList.remove('hidden');
+                  mobileNav.classList.add('visible');
+                  menuIcon.style.display = 'none';
+                  closeIcon.style.display = 'inline';
+                  } else {
+                      mobileNav.classList.remove('visible');
+                      mobileNav.classList.add('hidden');
+                      menuIcon.style.display = 'inline';
+                      closeIcon.style.display = 'none';
+                  }
+              }
