@@ -1,29 +1,49 @@
-/*
-// Function to check if an element is in the viewport
+
+let animationTriggered = false;
+
 function isInViewport(element) {
-   const rect = element.getBoundingClientRect();
-   return (
-     rect.top >= 0 &&
-     rect.left >= 0 &&
-     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-  }
-  
-  // Function to handle scroll event
- function handleScroll() {
-    const animatedBlock = document.getElementById('animatedBlock');
-    if (isInViewport(animatedBlock)) {
-      animatedBlock.classList.add('animated');
-      // Remove the scroll event listener once the animation is triggered
-     window.removeEventListener('scroll', handleScroll);
+}
+
+function handleScroll() {
+    const section1Text = document.getElementById('section1Text');
+    const redline = document.getElementById('redline');
+
+    if (animationTriggered) {
+        return;
     }
-  }
+
+    if (isInViewport(section1Text)) {
+        section1Text.classList.add('section1-animate');
+        animationTriggered = true;
+    } else {
+      section1Text.classList.remove('section1-animate')
+    }
+
+    if (isInViewport(redline)) {
+        redline.classList.add('redline-animate');
+        animationTriggered = true; 
+    } else {
+      section1Text.classList.remove('redline-animate')
+    }
+
+    if (animationTriggered) {
+        window.removeEventListener('scroll', handleScroll);
+    }
+}
+window.addEventListener('scroll', handleScroll);
+
+handleScroll();
+
+
   
-  // Add scroll event listener
-  window.addEventListener('scroll', handleScroll);
-  
-*/
+
 
 
 
@@ -66,4 +86,32 @@ function isInViewport(element) {
                       menuIcon.style.display = 'inline';
                       closeIcon.style.display = 'none';
                   }
-              }
+              };
+
+
+
+
+
+
+
+        /*
+              document.addEventListener("DOMContentLoaded", function() {
+                const elements = document.querySelectorAll('.animate-on-scroll');
+                
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+            
+                elements.forEach(element => {
+                    observer.observe(element);
+                });
+            });
+            
+
+*/
+            

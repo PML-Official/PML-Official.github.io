@@ -37,27 +37,44 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
 
 
 /* section 1 */
-.text_1-1 {font-family: "Roboto", sans-serif;}
+#section1Text {font-family: 'Roboto', sans-serif; width: 500px; margin-bottom: 100px; opacity: 0; margin-left: 0; } 
+#redline {width: 10px; background-color: red; height: 0px; margin-right: 0px;}
+.what-is-pml-home-contain ul {display: inline-block; list-style-type: none; margin: 0; padding: 0;} .what-is-pml-home-contain li {display: inline-block; margin: 0; padding: 0;} 
+.what-is-pml-home-contain {display: flex; flex-direction: column; align-items: center; justify-content: center;}
 
-
-
-
-
-
-.animated {opacity: 0; animation: slide-in1 1s forwards;}
-@keyframes slide-in1 {
+@keyframes scaleline {
     from {
-        transform: translate(0px, 0px);
-        opacity: 0;
-    }
-    to {
-        transform: translate(60px, 30px);
+        height: 0px;
+        transform-origin: center center;
+        opacity: 0.4;
+    } to {
+        height: 140px;
+        transform-origin: center center;
         opacity: 1;
     }
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        margin-left: 0;
+    } to {
+        opacity: 1;
+        margin-left: 30px;
+    }
+}
+.redline-animate {
+    animation: scaleline 0.5s forwards
+}
+
+.section1-animate {
+    animation: fadein 0.5s forwards
 }
 
 
 
+
+
+#blank_space {height: 50px; width: 100%}
 
 
 
