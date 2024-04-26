@@ -111,7 +111,7 @@
 
 <section class="banner-image-contain">
     <div id="banner-button-contain">
-    <button class="banner-button" src="AboutPML.html" onclick="document.location='AboutPML.html'">Learn More</button>
+    <button id="banner-button" class="learnmore" src="AboutPML.html" onclick="document.location='AboutPML.html'">Learn More</button>
     </div>
     <img alt="banner-image" class="banner-image1" src="images/Banner Image 1.png">
     <img alt="banner-image" class="banner-image2" src="images/Banner Image2.png">
@@ -121,21 +121,26 @@
 </section>
 
 <section class="what-is-pml-home-contain">
-    <ul>
-        <li>
-            <div id="redline" class="redline-animate"></div>
-        </li>
-        <li>
-            <div id="section1Text" class="section1-animate">
-                <h1><b>What is PML?</b></h1>
-                <span>
-                    PML, or PDF Markup Language, is a tool that simplifies the creation of efficient and responsive PDF documents through the PML App. With intuitive syntax and easy-to-learn tags, PML enables users of all levels to design professional-grade PDFs with ease, and elevate their PDFs to new levels of sophistication and functionality.
-                </span>
-            </div>
-        </li>
-    </ul>
+    <div id="background">
+        <ul>
+            <li>
+                <div id="redline" class="redline-animate"></div>
+            </li>
+            <li>
+                <div id="section1Text" class="section1-animate">
+                    <h1><b>What is PML?</b></h1>
+                    <span>
+                        PML, or PDF Markup Language, is a tool that simplifies the creation of efficient and responsive PDF documents through the PML App. With intuitive syntax and easy-to-learn tags, PML enables users of all levels to design professional-grade PDFs with ease, and elevate their PDFs to new levels of sophistication and functionality.
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <button class="learnmore" id="button2" onclick="document.location='AboutPML.html'">Learn About PML</button>
+    </div>
 </section>
+
 <div id="blank_space"></div>
+
 <script defer src="pageAnimations.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+// First page animation - section 1: What is PML?
 
 let animationTriggered = false;
 
@@ -14,6 +15,7 @@ function isInViewport(element) {
 function handleScroll() {
     const section1Text = document.getElementById('section1Text');
     const redline = document.getElementById('redline');
+    const button = document.getElementById('button2');
 
     if (animationTriggered) {
         return;
@@ -30,7 +32,14 @@ function handleScroll() {
         redline.classList.add('redline-animate');
         animationTriggered = true; 
     } else {
-      section1Text.classList.remove('redline-animate')
+      redline.classList.remove('redline-animate')
+    }
+
+    if (isInViewport(button)) {
+        button.classList.add('button-animate');
+        animationTriggered = true;
+    } else {
+        button.classList.remove('button-animate');
     }
 
     if (animationTriggered) {
@@ -90,28 +99,4 @@ handleScroll();
 
 
 
-
-
-
-
-        /*
-              document.addEventListener("DOMContentLoaded", function() {
-                const elements = document.querySelectorAll('.animate-on-scroll');
-                
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                });
-            
-                elements.forEach(element => {
-                    observer.observe(element);
-                });
-            });
-            
-
-*/
             

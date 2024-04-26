@@ -3,7 +3,7 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
 .links li {display: inline-block; margin-left: 53px;} .normalnavlinks {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} .normalnavlinks:hover {cursor: default; text-decoration: underline; color:rgb(255,255,255)}
 .ddcontent {display: none; position: absolute; background-color: black; min-width: 180px; box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.4); z-index: 1;} .ddcontent a {color: white; padding: 8px 28px; text-decoration: none; display: block; font-family: "Roboto", sans-serif;} .ddcontent a:hover {background-color: rgb(24, 24, 24)}
 .dropdown:hover .ddcontent {display: block;} #downloadlink {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} #downloadlink:hover {cursor: pointer; color: rgb(255,255,255); text-decoration:underline;}
-.navlogo {max-height: 100px; height: 100px; margin-left: 80px; transition: height 0.2s;} .banner-button {background-color: red; padding: 13px; padding-left: 22px; padding-right: 22px; color: white; border: none; border-radius: 5px; font-size: 1.3rem;}
+.navlogo {max-height: 100px; height: 100px; margin-left: 80px; transition: height 0.2s;} 
 /* mobile nav */
 #mobile-nav {width: 100%;background-color: black; height: 80%; z-index: 9999; display: none; visibility: hidden; position: absolute; margin-top: 2px; transition: opacity 0.2s ease; margin-left: 0px !important; padding: 0 !important;} #mobile-nav ul {list-style-type: none;} #mobile-nav ul li {padding-top: 20px; padding-bottom: 20px; width: 100%; margin-left: 0px;} #mobile-nav ul li a {color: white; text-decoration: none; font-family: "Roboto", sans-serif; margin-left: 10px;} #mobile-nav ul li:hover {background-color:rgb(37, 37, 37); cursor: pointer; }
 #mobile-nav.hidden {opacity: 0; display: none; visibility: hidden;} #mobile-nav.visible {opacity: 1; display: block; visibility: visible;} 
@@ -14,33 +14,51 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
 .testdiv {height: 4000px; width: 80%; background-color: aqua; z-index: 1;}
 
 /* banner image */
-.banner-image1 {width: 100%; height: auto; display: block; position: relative; z-index: -1;} .banner-image-contain {width: 100%;} .banner-button {position: absolute; z-index: 1; margin-top:53%;} #banner-button-contain {display: flex; align-items: center; justify-content: center; width: 100;}
-.banner-button {background-color: rgba(255, 0, 0, 0.894); padding: 13px; padding-left: 22px; padding-right: 22px; width: 200px; height: 50px; color: rgb(238, 238, 238); border: none; border-radius: 10px; font-size: 1.3rem; transition: 0.3s; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)} .banner-button:hover { cursor: pointer; color: rgb(255, 255, 255); box-shadow:none;}
+.banner-image1 {width: 100%; height: auto; display: block; position: relative; z-index: -1;} .banner-image-contain {width: 100%;} #banner-button {position: absolute; z-index: 1; margin-top:53%; } #banner-button-contain {display: flex; align-items: center; justify-content: center; width: 100;}
+.learnmore {background-color: rgba(255, 0, 0, 0.894); padding: 13px; padding-left: 22px; padding-right: 22px; transition: 0.3s; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); width: 200px; height: 50px; color: rgb(238, 238, 238); border: none; border-radius: 10px; font-size: 1.3rem;} .learnmore:hover { cursor: pointer; color: rgb(255, 255, 255); box-shadow:none;}
 .banner-image2 {width: 100%; height: auto; display: none; position: relative; z-index: -1;}
 .banner-image3 {width: 100%; height: auto; display: none; position: relative; z-index: -1;}
 .banner-image4 {width: 100%; height: auto; display: none; position: relative; z-index: -1;}
-.banner-image5 {width: 100%; height: auto; display: none; position: relative; z-index: -1;}
+.banner-image5 {width: 100%; height: auto; display: none; position: relative; z-index: -1;} 
 
 
 /* ipad landscape */
-@media only screen and (max-width: 1500px) and (min-width: 1101px) { .link_container {display: block; margin-left: 42%} .banner-button { font-size: 1rem; height:fit-content; width: 170px;}}
+@media only screen and (max-width: 1500px) and (min-width: 1101px) { .link_container {display: block; margin-left: 42%} #banner-button { font-size: 1rem; height:fit-content; width: 170px;}}
 /* for ipad landscape small */
-@media only screen and (max-width: 1100px) and (min-width: 900px) { .link_container {display: block; margin-left: 30%} .banner-image1 {display: none; visibility: hidden;} .banner-image2 {display: block;} .banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 74%;}}
+@media only screen and (max-width: 1100px) and (min-width: 900px) { .link_container {display: block; margin-left: 30%} .banner-image1 {display: none; visibility: hidden;} .banner-image2 {display: block;} #banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 74%;}}
 /* navigation -landscape 1 */
-@media only screen and (max-width: 899px) and (min-width: 670px) { .link_container {display: none;} .mobile_hamburger {display: block; } .navlogo {margin-left: 60px;} #mobile-nav {display: block; visibility: visible;} .banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 90%;} .banner-image3{display: block;} .banner-image1{display: none; visibility: hidden;}}
+@media only screen and (max-width: 899px) and (min-width: 670px) { .link_container {display: none;} .mobile_hamburger {display: block; } .navlogo {margin-left: 60px;} #mobile-nav {display: block; visibility: visible;} #banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 90%;} .banner-image3{display: block;} .banner-image1{display: none; visibility: hidden;}}
 /* navigation - landscape 2 */
-@media only screen and (min-width: 550px) and (max-width: 669px) {.mobile_hamburger {display: block; margin-left: 56%;} .link_container {display: none;} .navlogo {margin-left: 56px;} #mobile-nav {display: block; visibility: visible;} .banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 100%;} .banner-image1 {display: none;} .banner-image3{display: none;} .banner-image4 {display: block}}
+@media only screen and (min-width: 550px) and (max-width: 669px) {
+    .mobile_hamburger {display: block; margin-left: 56%;} 
+    .link_container {display: none;} .navlogo {margin-left: 56px;} 
+    #mobile-nav {display: block; visibility: visible;} 
+    #banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 100%;} 
+    .banner-image1 {display: none;} .banner-image3{display: none;} .banner-image4 {display: block}
+}
 /* navigation - landscape 3 */
-@media only screen and (min-width: 100px) and (max-width: 549px) {.mobile_hamburger {display: block; margin-left: 48%;} .link_container {display: none;} .navlogo {margin-left: 38px;} #mobile-nav {display: block; visibility: visible;} #mobile-nav ul li a {margin-left: 0px;} .banner-image1 {display: none;} .banner-image4 {display: none;} .banner-image5{display: block} .banner-button {margin-top: 154%;}}
+@media only screen and (min-width: 100px) and (max-width: 549px) {
+    .mobile_hamburger {display: block; margin-left: 48%;} 
+    .link_container {display: none;} .navlogo {margin-left: 38px;} 
+    #mobile-nav {display: block; visibility: visible;} #mobile-nav ul li a {margin-left: 0px;} 
+    .banner-image1 {display: none;} .banner-image4 {display: none;} .banner-image5{display: block} 
+    #banner-button {margin-top: 154%;}
+}
 /* navigation- landscape 4 */
-@media only screen and (min-width: 1px) and (max-width: 99) {.mobile_hamburger {display: block; margin-left: 46%;} .link_container {display: none;} .navlogo {margin-left: 38px;} #mobile-nav {display: block; visibility: visible;} #mobile-nav ul li a {margin-left: 0;} .banner-image1 {display: none;} .banner-image4 {display: none;} .banner-image5{display: block} .banner-button {margin-top: 154%;}}
+@media only screen and (min-width: 1px) and (max-width: 99) {
+    .mobile_hamburger {display: block; margin-left: 46%;} 
+    .link_container {display: none;} .navlogo {margin-left: 38px;} 
+    #mobile-nav {display: block; visibility: visible;} #mobile-nav ul li a {margin-left: 0;} 
+    .banner-image1 {display: none;} .banner-image4 {display: none;} .banner-image5{display: block} 
+    #banner-button {margin-top: 154%;}
+}
 
 
 /* section 1 */
-#section1Text {font-family: 'Roboto', sans-serif; width: 500px; margin-bottom: 100px; opacity: 0; margin-left: 0; } 
-#redline {width: 10px; background-color: red; height: 0px; margin-right: 0px;}
+#section1Text {font-family: 'Roboto', sans-serif; font-size: 1.3rem; width: 500px; margin-bottom: 100px; opacity: 0; margin-left: 0; margin-top: 80px; } #button2 {width: 250px; position: absolute; margin-top: 360px; left: 205px;}
+#redline {width: 10px; background-color: red; height: 200px; margin-right: 0px; margin-left: 200px;} #background {background-color: rgb(225, 225, 225); height: 490px;}
 .what-is-pml-home-contain ul {display: inline-block; list-style-type: none; margin: 0; padding: 0;} .what-is-pml-home-contain li {display: inline-block; margin: 0; padding: 0;} 
-.what-is-pml-home-contain {display: flex; flex-direction: column; align-items: center; justify-content: center;}
+
 
 @keyframes scaleline {
     from {
@@ -48,7 +66,7 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
         transform-origin: center center;
         opacity: 0.4;
     } to {
-        height: 140px;
+        height: 220px;
         transform-origin: center center;
         opacity: 1;
     }
@@ -65,8 +83,10 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
 .redline-animate {
     animation: scaleline 0.5s forwards
 }
-
 .section1-animate {
+    animation: fadein 0.5s forwards
+}
+.button-animate {
     animation: fadein 0.5s forwards
 }
 
