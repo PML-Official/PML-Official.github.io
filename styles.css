@@ -23,25 +23,46 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
 
 
 /* ipad landscape */
-@media only screen and (max-width: 1500px) and (min-width: 1101px) { .link_container {display: block; margin-left: 42%} #banner-button { font-size: 1rem; height:fit-content; width: 170px;}}
+@media only screen and (max-width: 1500px) and (min-width: 1101px) { 
+    .link_container {display: block; margin-left: 42%} 
+    #banner-button { font-size: 1rem; height:fit-content; width: 170px;}
+}
 /* for ipad landscape small */
-@media only screen and (max-width: 1100px) and (min-width: 900px) { .link_container {display: block; margin-left: 30%} .banner-image1 {display: none; visibility: hidden;} .banner-image2 {display: block;} #banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 74%;}}
+@media only screen and (max-width: 1100px) and (min-width: 900px) { 
+    .link_container {display: block; margin-left: 30%} 
+    .banner-image1 {display: none; visibility: hidden;} 
+    .banner-image2 {display: block;} 
+    #banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 74%;}
+    #redline {margin-left: 0px !important;} .what-is-pml-home-contain {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background-color: rgb(225, 225, 225);}
+    #button2 {position: inherit; align-items: center;}
+}
 /* navigation -landscape 1 */
-@media only screen and (max-width: 899px) and (min-width: 670px) { .link_container {display: none;} .mobile_hamburger {display: block; } .navlogo {margin-left: 60px;} #mobile-nav {display: block; visibility: visible;} #banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 90%;} .banner-image3{display: block;} .banner-image1{display: none; visibility: hidden;}}
+@media only screen and (max-width: 899px) and (min-width: 670px) { 
+    .link_container {display: none;} 
+    .mobile_hamburger {display: block; } .navlogo {margin-left: 60px;} 
+    #mobile-nav {display: block; visibility: visible;} 
+    #banner-button { font-size: 1rem; height:fit-content;width: 170px; margin-top: 90%;} 
+    .banner-image3{display: block;} .banner-image1{display: none; visibility: hidden;}
+    #redline {margin-left: 0px !important;} .what-is-pml-home-contain {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background-color: rgb(225, 225, 225);}
+}
 /* navigation - landscape 2 */
-@media only screen and (min-width: 550px) and (max-width: 669px) {
+@media only screen and (min-width: 560px) and (max-width: 669px) {
     .mobile_hamburger {display: block; margin-left: 56%;} 
     .link_container {display: none;} .navlogo {margin-left: 56px;} 
     #mobile-nav {display: block; visibility: visible;} 
     #banner-button { font-size: 1rem; height:fit-content; width: 170px; margin-top: 100%;} 
-    .banner-image1 {display: none;} .banner-image3{display: none;} .banner-image4 {display: block}
+    .banner-image1 {display: none;} .banner-image3{display: none;} .banner-image4 {display: block} #section1Text {font-size: 1.25rem !important;}
+    #redline {margin-left: 0px !important;} .what-is-pml-home-contain {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background-color: rgb(225, 225, 225);}
+    
 }
 /* navigation - landscape 3 */
-@media only screen and (min-width: 100px) and (max-width: 549px) {
+@media only screen and (min-width: 100px) and (max-width: 559px) {
     .mobile_hamburger {display: block; margin-left: 48%;} 
     .link_container {display: none;} .navlogo {margin-left: 38px;} 
     #mobile-nav {display: block; visibility: visible;} #mobile-nav ul li a {margin-left: 0px;} 
     .banner-image1 {display: none;} .banner-image4 {display: none;} .banner-image5{display: block} 
+    #redline {margin-left: 0px !important; display: none; visibility: hidden;} .what-is-pml-home-contain {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background-color: rgb(225, 225, 225);}
+    #section1Text {font-size: 1.1rem !important; display: block; width: 200px}
     #banner-button {margin-top: 154%;}
 }
 /* navigation- landscape 4 */
@@ -51,12 +72,14 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
     #mobile-nav {display: block; visibility: visible;} #mobile-nav ul li a {margin-left: 0;} 
     .banner-image1 {display: none;} .banner-image4 {display: none;} .banner-image5{display: block} 
     #banner-button {margin-top: 154%;}
+    #section1Text {font-size: 1.1rem;}
+    #redline {margin-left: 0px !important;} .what-is-pml-home-contain {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background-color: rgb(225, 225, 225);}
 }
 
 
 /* section 1 */
 #section1Text {font-family: 'Roboto', sans-serif; font-size: 1.3rem; width: 500px; margin-bottom: 100px; opacity: 0; margin-left: 0; margin-top: 80px; } #button2 {width: 250px; position: absolute; margin-top: 360px; left: 205px;}
-#redline {width: 10px; background-color: red; height: 200px; margin-right: 0px; margin-left: 200px;} #background {background-color: rgb(225, 225, 225); height: 490px;}
+#redline {width: 10px; background-color: red; height: 0px; margin-right: 0px; margin-left: 200px;} #background {background-color: rgb(225, 225, 225); height: 490px;}
 .what-is-pml-home-contain ul {display: inline-block; list-style-type: none; margin: 0; padding: 0;} .what-is-pml-home-contain li {display: inline-block; margin: 0; padding: 0;} 
 
 
