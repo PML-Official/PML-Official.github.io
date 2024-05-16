@@ -5,7 +5,7 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
 .dropdown:hover .ddcontent {display: block;} #downloadlink {color: rgb(255, 255, 255); font-family: "Roboto", sans-serif; text-decoration:none;} #downloadlink:hover {cursor: pointer; color: rgb(255,255,255); text-decoration:underline;}
 .navlogo {max-height: 100px; height: 100px; margin-left: 80px; transition: height 0.2s;} 
 /* mobile nav */
-#mobile-nav {width: 100%;background-color: black; height: 80%; z-index: 9999; display: none; visibility: hidden; position: absolute; margin-top: 2px; transition: opacity 0.2s ease; margin-left: 0px !important; padding: 0 !important;} #mobile-nav ul {list-style-type: none;} #mobile-nav ul li {padding-top: 20px; padding-bottom: 20px; width: 100%; margin-left: 0px;} #mobile-nav ul li a {color: white; text-decoration: none; font-family: "Roboto", sans-serif; margin-left: 10px;} #mobile-nav ul li:hover {background-color:rgb(37, 37, 37); cursor: pointer; }
+#mobile-nav {width: 100%;background-color: black; height: 80%; z-index: 9999; display: none; visibility: hidden; position: fixed; margin-top: 0px; transition: opacity 0.2s ease; margin-left: 0px !important; padding: 0 !important;} #mobile-nav ul {list-style-type: none;} #mobile-nav ul li {padding-top: 20px; padding-bottom: 20px; width: 100%; margin-left: 0px;} #mobile-nav ul li a {color: white; text-decoration: none; font-family: "Roboto", sans-serif; margin-left: 10px;} #mobile-nav ul li:hover {background-color:rgb(37, 37, 37); cursor: pointer; }
 #mobile-nav.hidden {opacity: 0; display: none; visibility: hidden;} #mobile-nav.visible {opacity: 1; display: block; visibility: visible;} 
 
 /* construction area */
@@ -61,8 +61,8 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
     .link_container {display: none;} .navlogo {margin-left: 38px;} 
     #mobile-nav {display: block; visibility: visible;} #mobile-nav ul li a {margin-left: 0px;} 
     .banner-image1 {display: none;} .banner-image4 {display: none;} .banner-image5{display: block} 
-    #redline {margin-left: 0px !important; display: none; visibility: hidden;} .what-is-pml-home-contain {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background-color: rgb(225, 225, 225);}
-    #section1Text {font-size: 1.1rem !important; display: block; width: 200px}
+    #redline{margin-left: 0px !important; display: none; visibility: hidden;} .what-is-pml-home-contain {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background-color: rgb(225, 225, 225);}
+    #section1Text {font-size: 1.1rem !important; display: block;  width: fit-content; min-height: fit-content;}
     #banner-button {margin-top: 154%;}
 }
 /* navigation- landscape 4 */
@@ -72,13 +72,13 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
     #mobile-nav {display: block; visibility: visible;} #mobile-nav ul li a {margin-left: 0;} 
     .banner-image1 {display: none;} .banner-image4 {display: none;} .banner-image5{display: block} 
     #banner-button {margin-top: 154%;}
-    #section1Text {font-size: 1.1rem;}
-    #redline {margin-left: 0px !important;} .what-is-pml-home-contain {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background-color: rgb(225, 225, 225);}
+    #section1Text {font-size: 0.9rem;}
+    #redline {margin-left: 0px !important; display: none; visibility: hidden;} .what-is-pml-home-contain {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background-color: rgb(225, 225, 225);}
 }
 
 
 /* section 1 */
-#section1Text {font-family: 'Roboto', sans-serif; font-size: 1.3rem; width: 500px; margin-bottom: 100px; opacity: 0; margin-left: 0; margin-top: 80px; } #button2 {width: 250px; position: absolute; margin-top: 360px; left: 205px;}
+#section1Text {font-family: 'Roboto', sans-serif; font-size: 1.3rem; width: 500px; margin-bottom: 100px; max-width: 80%; text-wrap: wrap; opacity: 0; margin-left: 0; margin-top: 80px; min-height: fit-content; } #button2 {width: 250px; margin-top: 20px; }
 #redline {width: 10px; background-color: red; height: 0px; margin-right: 0px; margin-left: 200px;} #background {background-color: rgb(225, 225, 225); height: 490px;}
 .what-is-pml-home-contain ul {display: inline-block; list-style-type: none; margin: 0; padding: 0;} .what-is-pml-home-contain li {display: inline-block; margin: 0; padding: 0;} 
 
@@ -89,12 +89,12 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
         transform-origin: center center;
         opacity: 0.4;
     } to {
-        height: 220px;
+        height: 310px;
         transform-origin: center center;
         opacity: 1;
     }
 }
-@keyframes fadein {
+@keyframes fadein1 {
     from {
         opacity: 0;
         margin-left: 0;
@@ -103,11 +103,19 @@ body {margin: 0 !important; padding: 0; max-width: 100%; overflow-x: none;} .nav
         margin-left: 30px;
     }
 }
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
 .redline-animate {
-    animation: scaleline 0.5s forwards
+    animation: scaleline 0.3s forwards
 }
 .section1-animate {
-    animation: fadein 0.5s forwards
+    animation: fadein1 0.5s forwards
 }
 .button-animate {
     animation: fadein 0.5s forwards
