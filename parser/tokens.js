@@ -1,3 +1,4 @@
+// The list of tokens
 const TagIDs = {
     TEXT: 0,
     BREAK: 1,
@@ -6,6 +7,7 @@ const TagIDs = {
     NEW_PAGE: 4
 }
 
+// The strings that directly correspond to the tokens
 const TagStrings = [
     "",
     "break:",

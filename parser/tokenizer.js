@@ -1,3 +1,4 @@
+// Placeholder text: this will get replaced with the text editor
 const text = `
 [meta-name: This is a title]
 [meta-author: Stashey13 and lukewhite32]
@@ -10,11 +11,11 @@ This is some more text to see if breaking is working.
 `
 
 
-// Parser: converts given text into a list of tokens
+// Tokenizer: converts the given text into a list of tokens
 
-class Parser {
+class Tokenizer {
     constructor() {
-        this.tokens = new TokenList();
+        this.tokens = [];
     }
 
     tokenizeLine(line) {
@@ -42,11 +43,8 @@ class Parser {
                 }
                 else {
                     for (var y = 1; y < TagStrings.length; y ++) {
-                        // alert(TagStrings[y]);
-                        // alert(line.slice(x, TagStrings[y].length));
                         if (line.slice(x, TagStrings[y].length+1) == TagStrings[y]) {
                             currentToken = new Token(y, "")
-                            //alert("creating new token!! " + y);
                             x += TagStrings[y].length;
                         }
                     }
@@ -63,13 +61,15 @@ class Parser {
     // Tokenizes the given text
     parse(text) {
         let lines = text.split('\n');
-        let tokens = [];
 
         lines.forEach(line => {
-            tokens.push(this.tokenizeLine(line));
+            this.tokens.push(this.tokenizeLine(line));
         });
+    }
 
-        tokens.forEach(tokenList => {
+    // For testing purposes
+    debug() {
+        this.tokens.forEach(tokenList => {
             tokenList.forEach(t => {
                 if (t.id == TagIDs.TEXT) {
                     alert("Text");
