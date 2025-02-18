@@ -1,0 +1,8 @@
+#bodyDash {background-color: rgb(32, 32, 32);}
+#dashboardTop {height: 60px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center;}
+#logoHeight {height: 50px!important; margin-left: 3vw!important; cursor: default!important;}
+#contain01 {color: white;}
+#dashText {margin-left: 41px; margin-bottom:4px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 20px;}
+#line {width: 1px; height: 35px; background-color: white; margin-left: 39px;}
+#backtohome {height: 40px; transform: rotate(180deg); margin-left: 80px; transition: all 0.3s ease;}
+#backtohome:hover {height: 43px; cursor: pointer;}

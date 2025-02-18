@@ -5,26 +5,22 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="texteditor.css">
     </head>
-    <body>
-            <div id="nav">
-                <div id="logocont">
-                    <img alt="pml-logo" src="./Images/PML White.png" href="./index.html" id="logo"/>
-                </div>
-        
-                <div id="contain">
-                    <div id="text">
-                        PDF Markup Language <br> Minimum Viable Product <br> Alpha Edition Beta <br> Version 0.0000000001
-                    </div>
-                </div>
-        
-                <div id="container">
-                    <div id="pages">
-                        <a href="./pml.html">PML Dashboard</a>
-                        <a href="./pages/user-guide.html">User Guide</a>
-                    </div>
-                </div>
-            </div>
+    <body id="bodyDash">
+           
         <!-- End Navigation -->
+         <div id="dashboardTop">
+            <img src="Images/double_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="backtohome-logo" id="backtohome">
+    
+                    <img src="Images/PML White.png" alt="pml-logo" class="logo" id="logoHeight">
+                    <div id="line"></div>
+                <div id="contain01">
+                    <div id="dashText">
+                        Dashboard
+                    </div>
+                </div>
+        </div>
+
+
 
 
         <div id="editor" texteditable="true"></div>
@@ -40,6 +36,8 @@
         <script src="parser/parser.js"></script>
         <script src="parser/pdfwriter.js"></script>
         <script src="parser/pdfassembler.js"></script>
+
+        <script src="javascript/javascript.js"></script>
 
     </body>
 </html>
