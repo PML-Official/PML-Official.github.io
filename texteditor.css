@@ -6,7 +6,9 @@
 #line {width: 1px; height: 35px; background-color: white; margin-left: 39px;}
 #backtohome {height: 28px; transform: rotate(180deg); margin-left: 80px; transition: all 0.3s ease; margin-right: 10px;}
 #backtohome:hover {height: 31px; cursor: pointer;}
-#runcode {height: 20px; background-color: rgb(32, 32, 32); color: white; display: flex; flex-direction: row; align-items: center; padding: 2px; padding-right: 6px; padding-left: 6px; border-radius: 3px; font-size: 14px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; border: 1px solid rgb(65, 65, 65); margin-left: 65px;}
+#runcode {height: 20px; background-color: rgb(32, 32, 32); color: white; display: flex; flex-direction: row; align-items: center; padding: 2px; padding-right: 6px; padding-left: 6px; border-radius: 3px; font-size: 14px; font-family: monospace; border: 1px solid rgb(65, 65, 65); margin-left: 8vw;}
 #runbutton {height: 34px; margin: none; cursor: pointer;}
 #line2 {height: 20px; width: 1px; background-color: rgb(65, 65, 65);}
-#runcode span {margin-left: 19px;}
+#runcode span {margin-left: 8px;}
+#saveicon {height: 30px; margin-top: 5px; margin-left: 30px;} 
+#download-icon {height: 30px; margin-top: 5px; margin-left: 30px;}
