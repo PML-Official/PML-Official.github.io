@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = "https://pml-official.github.io"
     });
 
+    
+    
+
 
 });
 

@@ -1,5 +1,5 @@
 #bodyDash {background-color: rgb(32, 32, 32);}
-#dashboardTop {height: 60px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center;}
+#dashboardTop {height: 60px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center; position: absolute; z-index: 1000; width: 100%;}
 #logoHeight {height: 50px!important; margin-left: 0!important; cursor: default!important;}
 #contain01 {color: white;}
 #dashText {margin-left: 41px; margin-bottom:4px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 20px;}
@@ -12,3 +12,4 @@
 #runcode span {margin-left: 8px;}
 #saveicon {height: 30px; margin-top: 5px; margin-left: 30px;} 
 #download-icon {height: 30px; margin-top: 5px; margin-left: 30px;}
+#editor {position: absolute; top: 90px; bottom: 10px; left: 45px; right: 1000px; outline: none; background-color: rgb(29, 29, 29); color: white; font-family: monospace; z-index: 100; overflow: auto; white-space: pre; user-select: text;  line-height: 20px;} 
