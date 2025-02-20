@@ -11,22 +11,40 @@
 
         <div id="sidebar">
 
-            <div id="open">
+            <div id="open" class="icon">
                 <img src="Images/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="open" id="openicon"/>
             </div>
 
-            <div id="close">
+            <div id="close" class="icon">
                 <img src="Images/close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="close" id="closeicon">
             </div>
 <!--  -->
             <div id="line3"></div>
 
-            <div id="save">
-                <img src="Images/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Save" id="saveicon"/>
+            <div id="home" class="icon">
+                <img src="Images/home_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="dashboardhome" id="homeicon"/>
             </div>
 
-            <div id="download">
+            <div id="save" class="icon">
+                <img src="Images/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Save" id="saveicon"/>
+                <span class="circle" id="saveAlert" style="display: none;"></span>
+            </div>
+
+            <div id="download" class="icon">
                 <img src="Images/download_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="download" id="download-icon"/>
+                <span class="circle"></span>
+            </div>
+
+            <div id="openFile" class="icon">
+                <img src="Images/folder_open_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="open-file" id="openFileicon"/>
+            </div>
+
+            <div id="newFile" class="icon">
+                <img src="Images/open_in_new_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="new-file" id="newicon"/>
+            </div>
+
+            <div id="saveas" class="icon">
+                <img src="Images/save_as_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Save As" id="saveAsicon">
             </div>
 
         </div>
@@ -55,13 +73,18 @@
 
             <div id="bodytop">
                 <div id="editorTop"><span class="agh">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton"><div id="line2"></div><span id="runcodespan">Run & Debug</span></div></div>
-                <div id="pdfTop"><span class="agh" id="agh1">Preview</span><span>/users/user/path/to/filename2</span></div>
-                <div id="errorsTop"><span class="agh" id="agh2">Debug</span></div>
+                <div id="pdfTop" onclick="togglePrev('placeholder')"><span class="agh" id="agh1">Preview</span><span>/users/user/path/to/filename2</span></div>
+                <div id="errorsTop" onclick="togglePrev('debug')"><span class="agh" id="agh2">Debug</span></div>
             </div>
-            
+           
+
+
+
+
             <div id="bodycontent">
                     <div id="editor" contenteditable="true"></div>
-                    <div id="placeholder">Iframe placeholder</div>
+                    <div id="placeholder" class="sidesizing" style="display: block;">Iframe placeholder</div>
+                    <div id="debug" class="sidesizing" style="display: none;">Debug Panel</div>
             </div>
 
         </div>
@@ -75,6 +98,38 @@
         <script src="parser/pdfassembler.js"></script>
 
         <script src="javascript/javascript.js"></script>
+        <script src="javascript/dashboard.js"></script>
+
+        <!-- Don't Delete-->
+        <script>
+             function togglePrev(divId) {
+    // Hide both sections
+    document.getElementById('placeholder').style.display = 'none';
+    document.getElementById('debug').style.display = 'none';
+
+    // Reset background colors of the parent divs
+    document.getElementById('pdfTop').style.backgroundColor = '';
+    document.getElementById('errorsTop').style.backgroundColor = '';
+
+    // Show the selected div
+    const targetDiv = document.getElementById(divId);
+    targetDiv.style.display = 'block';
+
+    // Change the background color of the corresponding top div
+    if (divId === 'placeholder') {
+        document.getElementById('pdfTop').style.backgroundColor = 'rgb(49, 49, 49)';
+    } else if (divId === 'debug') {
+        document.getElementById('errorsTop').style.backgroundColor = 'rgb(49, 49, 49)';
+    }
+}
+
+// Set initial active state
+window.onload = function () {
+    document.getElementById('pdfTop').style.backgroundColor = 'rgb(49, 49, 49)';
+};
+
+
+        </script>
 
     </body>
 </html>
