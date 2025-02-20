@@ -7,7 +7,32 @@
     </head>
     <body id="bodyDash">
            
-        <!-- End Navigation -->
+       
+
+        <div id="sidebar">
+
+            <div id="open">
+                <img src="Images/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="open" id="openicon"/>
+            </div>
+
+            <div id="close">
+                <img src="Images/close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="close" id="closeicon">
+            </div>
+<!--  -->
+            <div id="line3"></div>
+
+            <div id="save">
+                <img src="Images/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Save" id="saveicon"/>
+            </div>
+
+            <div id="download">
+                <img src="Images/download_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="download" id="download-icon"/>
+            </div>
+
+        </div>
+
+
+
          <div id="dashboardTop">
             <img src="Images/double_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="backtohome-logo" id="backtohome">
     
@@ -18,35 +43,26 @@
                         Dashboard
                     </div>
                 </div>
+       
 
-                <div id="runcode">
-
-                    <!--   Note For Luke:     The Actual button for running the code is going to be the Image Below - nothing else-->
-
-                    <img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton">
-                    <div id="line2"></div>
-                    <span>
-                    Run & Debug
-                    </span>
-                </div>
-
-                <div id="save">
-                    <img src="Images/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Save" id="saveicon"/>
-                </div>
-
-                <div id="download">
-                    <img src="Images/download_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="download" id="download-icon"/>
-                </div>
         </div>
+
+         
+    
+
         <div id="body">
+            <div id="overlay"></div>
 
-
-  
-                <div id="line-numbers"></div>
-                <div id="editor" contenteditable="true"></div>
-          
-
-
+            <div id="bodytop">
+                <div id="editorTop"><span class="agh">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton"><div id="line2"></div><span id="runcodespan">Run & Debug</span></div></div>
+                <div id="pdfTop"><span class="agh" id="agh1">Preview</span><span>/users/user/path/to/filename2</span></div>
+                <div id="errorsTop"><span class="agh" id="agh2">Debug</span></div>
+            </div>
+            
+            <div id="bodycontent">
+                    <div id="editor" contenteditable="true"></div>
+                    <div id="placeholder">Iframe placeholder</div>
+            </div>
 
         </div>
 

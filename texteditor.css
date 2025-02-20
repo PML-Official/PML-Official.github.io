@@ -1,15 +1,49 @@
+
 #bodyDash {background-color: rgb(32, 32, 32);}
-#dashboardTop {height: 60px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center; position: absolute; z-index: 1000; width: 100%;}
-#logoHeight {height: 50px!important; margin-left: 0!important; cursor: default!important;}
+#dashboardTop {height: 45px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center; position: absolute; z-index: 1000; right: 0; left: 45px; border-bottom: 1px solid rgba(81, 81, 81, 0.453);}
+#logoHeight {height: 40px!important; margin-left: 0!important; cursor: default!important;}
 #contain01 {color: white;}
-#dashText {margin-left: 41px; margin-bottom:4px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 20px;}
-#line {width: 1px; height: 35px; background-color: white; margin-left: 39px;}
-#backtohome {height: 28px; transform: rotate(180deg); margin-left: 80px; transition: all 0.3s ease; margin-right: 10px;}
-#backtohome:hover {height: 31px; cursor: pointer;}
-#runcode {height: 20px; background-color: rgb(32, 32, 32); color: white; display: flex; flex-direction: row; align-items: center; padding: 2px; padding-right: 6px; padding-left: 6px; border-radius: 3px; font-size: 14px; font-family: monospace; border: 1px solid rgb(65, 65, 65); margin-left: 8vw;}
+#dashText {margin-left: 41px; margin-bottom:4px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 18px;}
+#line {width: 1px; height: 29px; background-color: white; margin-left: 39px;}
+
+
+#backtohome {height: 24px; transform: rotate(180deg); margin-left: 3vw; transition: all 0.3s ease; margin-right: 10px;}
+#backtohome:hover {height: 28px; cursor: pointer;}
+
+#runcode {height: 15px; background-color: rgb(32, 32, 32); color: white; display: flex; flex-direction: row; align-items: center; padding: 2px; padding-right: 2px; padding-left: 2px; border-radius: 3px; font-size: 13px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; border: 1px solid rgb(65, 65, 65); margin-left: 5vw;}
 #runbutton {height: 34px; margin: none; cursor: pointer;}
 #line2 {height: 20px; width: 1px; background-color: rgb(65, 65, 65);}
-#runcode span {margin-left: 8px;}
-#saveicon {height: 30px; margin-top: 5px; margin-left: 30px;} 
-#download-icon {height: 30px; margin-top: 5px; margin-left: 30px;}
-#editor {position: absolute; top: 90px; bottom: 10px; left: 45px; right: 1000px; outline: none; background-color: rgb(29, 29, 29); color: white; font-family: monospace; z-index: 100; overflow: auto; white-space: pre; user-select: text;  line-height: 20px;} 
+#runcodespan {margin-left: 8px!important; margin-right: 7px}
+
+
+#saveicon, #download-icon, #openicon, #closeicon {height: 25px;} 
+#save, #download, #open, #close {border-radius: 1px; width: 100%; cursor: pointer; display: flex; flex-direction: column; align-items: center; padding-top: 5px; padding-bottom: 5px;}
+#save:hover {background-color: rgb(64, 64, 64);} 
+#download:hover {background-color: rgb(64, 64, 64);}
+#open, #close {margin-top: 6px}
+#close {display: none;}
+#save {margin-top: 18px!important;}
+#line3 {height: 1px; width: 80%; background-color: rgb(64, 64, 64); margin-top: 18px;}
+
+/* overlay not yet in use */
+#overlay {background-color: black; position: absolute; display: none; top: 45px; bottom: 0; right: 0; left: 44px; z-index: 100000; opacity: 1; transition: all 0.2s ease;}
+
+
+#sidebar {position: absolute; left: 0; top: 0; bottom: 0; width: 44px; background-color: rgb(16, 16, 16); border-right: 1px solid rgba(81, 81, 81, 0.453); z-index: 1000; display: flex; flex-direction: column; align-items: center;}
+
+
+#bodytop {display: flex; position: absolute; top: 45px; left: 45px; right: 0; bottom: 0;}
+#editorTop {height: 30px; flex-grow: 1; min-width: 450px; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453);  color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; padding-left: 9px;}
+.agh {font-size: 17px!important; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif!important; margin-left: 5px!important;}
+#editorTop span {margin-left: 3vw;}
+#pdfTop {height: 30px; width: 20%; min-width: 350px; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453); color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; }
+#pdfTop span {margin-left: 3vw}
+#agh1 {margin-left: 14px!important;} #agh2 {margin-left: 14px!important;}
+#errorsTop {height: 30px; width: 20%; min-width: 350px; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453);  color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; }
+
+
+#placeholder {width: 40%; min-width: 700px; display: flex; align-items: center; justify-content: center; background-color: rgb(64, 64, 64);}
+#bodycontent {display: flex; position: absolute; top: 75px; left: 45px; right: 0; bottom: 0;}
+#editor {flex-grow: 1; min-width: 450px; outline: none; line-height: 14px; font-size: 15px; padding-top: 16px; padding-left: 18px; background-color: rgb(29, 29, 29); color: white; border: 1px solid rgba(81, 81, 81, 0.453); border-left: none; font-family: monospace; overflow: auto; white-space: pre; user-select: text;  line-height: 20px;} 
+
+
