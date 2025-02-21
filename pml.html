@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PML</title>
+        <title>PML Dashboard</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="texteditor.css">
-        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="Images/PML White.png">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="description" content="PDF Markup Language - HTML for PDFs">
+        <meta name="keywords" content="PDF, PDF Markup Language, PML, HTML for PDFs, PDF Coding">
+        <meta name="author" content="Stashey13, Lukewhite32">
+
+        <meta property="og:title" content="PML Dashboard">
+        <meta property="og:description" content="PDF Markup Language - HTML for PDFs">
+        <meta property="og:image" content="https://pml-official.github.io/Images/PML%20White.png">
+        <meta property="og:url" content="https://pml-official.github.io/">
+        <meta property="og:type" content="website">
+
     </head>
     <body id="bodyDash">
            
        
+
+
+
+<!-- Sidebar  -->
+
+
+
 
         <div id="sidebar">
 
@@ -52,6 +74,16 @@
 
 
 
+
+
+
+<!-- Dashboard Top Navigation -->
+
+
+
+
+
+
          <div id="dashboardTop">
             <img src="Images/double_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="backtohome-logo" id="backtohome">
     
@@ -68,22 +100,26 @@
 
          
     
-
-        <div id="body">
+<!-- Everything Else -->
             <div id="overlay"></div>
 
-            <div id="bodytop">
-                <div id="editorTop"><span class="agh">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton" onclick="parse()"><div id="line2"></div><span id="runcodespan">Run & Debug</span></div></div>
-                <div id="pdfTop" onclick="togglePrev('placeholder')"><span class="agh" id="agh1">Preview</span><span>/users/user/path/to/filename2</span></div>
-                <div id="errorsTop" onclick="togglePrev('debug')"><span class="agh" id="agh2">Debug</span></div>
-            </div>
-           
+
+<!--Body Content-->
+
+<div id="bodycontent">
 
 
 
+    <div id="pageleft">
 
-            <div id="bodycontent">
-                    <div id="editor" contenteditable="true">
+        <div id="insideLeftContain">
+
+        <div id="leftButtons">
+            <span class="agh">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton" onclick="parse()"><div id="line2"></div><span id="runcodespan">Run & Debug</span></div>
+        </div>
+
+            <div id="editorContain">
+                <div id="editor" contenteditable="true">
 [meta-name: This is a title]
 [meta-author: Stashey13 and lukewhite32]
                         
@@ -105,16 +141,62 @@ in their computer, the file path on their computer will be right there if possib
 
 [break:] 
 just so you know, the reason the text is spaced wacky like this, is because there are spaces in the empty lines. We need to fix that somehow.
-                        </div>
-                    <iframe id="placeholder" class="sidesizing" style="display: block;">Loading...</iframe>
-                    <div id="debug" class="sidesizing" style="display: none;">Debug Panel</div>
+                </div>
             </div>
 
         </div>
 
+    </div>
 
 
-        <!-- Javascript -->
+
+
+
+    <div id="pageright">
+
+        <div id="insideRightContain">
+
+            <div id="rightButtons">
+                <div id="pdfTop" onclick="togglePrev('placeholder')"><span class="agh" id="agh1">Preview</span><span>/users/user/path/to/filename2</span></div><div id="errorsTop" onclick="togglePrev('debug')"><span class="agh" id="agh2">Debug</span></div>
+            </div>
+
+            <div id="iframeContain">
+                <iframe id="placeholder" class="rightsidesizing" style="display: block;"></iframe>
+                <div id="debug" class="rightsidesizing" style="display: none;">Debug Panel</div>
+            </div>
+
+        </div>
+
+    </div>
+            
+
+    
+
+
+
+
+
+<!-- End Body Content -->
+</div>
+<!---->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Javascript -->
+
+
+
+
         <script src="https://github.com/devongovett/pdfkit/releases/download/v0.10.0/pdfkit.standalone.js"></script>
         <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
 
