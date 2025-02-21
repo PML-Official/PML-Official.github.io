@@ -83,15 +83,30 @@
 
 
             <div id="bodycontent">
-                    <div id="editor" contenteditable="true">[meta-name: This is a title]
+                    <div id="editor" contenteditable="true">
+[meta-name: This is a title]
 [meta-author: Stashey13 and lukewhite32]
-
+                        
 [-- Page 1]
+                        
 This is some text. 
 This is some really cool text.
 [break:]
-This is some more text to see if breaking is working.</div>
-                    <iframe id="placeholder" class="sidesizing" style="display: block;"></iframe>
+[break:]
+Just so you know, it doesn't stack on top of each other when you have two breaks. I dont know if we want it to do that?
+[break: it also works for some reason when you have text inside of a break] 
+                       
+                        
+Also, can you make it where before it automatically downloads you select where the download will go? 
+(When you press the button)
+[break:]
+In the future, you see where next to code it says "/users/user/path/to/filename'?  well when they select their pml file 
+in their computer, the file path on their computer will be right there if possible. same thing next to preview. 
+
+[break:] 
+just so you know, the reason the text is spaced wacky like this, is because there are spaces in the empty lines. We need to fix that somehow.
+                        </div>
+                    <iframe id="placeholder" class="sidesizing" style="display: block;">Loading...</iframe>
                     <div id="debug" class="sidesizing" style="display: none;">Debug Panel</div>
             </div>
 
@@ -115,32 +130,26 @@ This is some more text to see if breaking is working.</div>
         <!-- Don't Delete-->
         <script>
              function togglePrev(divId) {
-    // Hide both sections
-    document.getElementById('placeholder').style.display = 'none';
-    document.getElementById('debug').style.display = 'none';
 
-    // Reset background colors of the parent divs
-    document.getElementById('pdfTop').style.backgroundColor = '';
-    document.getElementById('errorsTop').style.backgroundColor = '';
+            document.getElementById('placeholder').style.display = 'none';
+            document.getElementById('debug').style.display = 'none';
 
-    // Show the selected div
-    const targetDiv = document.getElementById(divId);
-    targetDiv.style.display = 'block';
+            document.getElementById('pdfTop').style.backgroundColor = '';
+            document.getElementById('errorsTop').style.backgroundColor = '';
 
-    // Change the background color of the corresponding top div
-    if (divId === 'placeholder') {
-        document.getElementById('pdfTop').style.backgroundColor = 'rgb(25, 25, 25)';
-    } else if (divId === 'debug') {
-        document.getElementById('errorsTop').style.backgroundColor = 'rgb(25, 25, 25)';
-    }
-}
+            const targetDiv = document.getElementById(divId);
+            targetDiv.style.display = 'block';
 
-// Set initial active state
-window.onload = function () {
-    document.getElementById('pdfTop').style.backgroundColor = 'rgb(25, 25, 25)';
-};
+            if (divId === 'placeholder') {
+                document.getElementById('pdfTop').style.backgroundColor = 'rgb(25, 25, 25)';
+            } else if (divId === 'debug') {
+                document.getElementById('errorsTop').style.backgroundColor = 'rgb(25, 25, 25)';
+            }
+        }
 
-
+        window.onload = function () {
+            document.getElementById('pdfTop').style.backgroundColor = 'rgb(25, 25, 25)';
+        };
         </script>
 
     </body>

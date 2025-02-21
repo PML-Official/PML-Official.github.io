@@ -51,5 +51,5 @@
 .sidesizing {width: 40%; min-width: 700px; display: flex; align-items: center; justify-content: center; background-color: rgb(64, 64, 64);}
 #bodycontent {display: flex; position: absolute; top: 75px; left: 45px; right: 0; bottom: 0;}
 #editor {flex-grow: 1; min-width: 450px; outline: none; line-height: 14px; font-size: 15px; padding-top: 16px; padding-left: 18px; background-color: rgb(29, 29, 29); color: white; border: 1px solid rgba(81, 81, 81, 0.453); border-left: none; font-family: monospace; overflow: auto; white-space: pre; user-select: text;  line-height: 20px;} 
-
+#placeholder {border: none;}
 
