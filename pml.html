@@ -4,6 +4,7 @@
         <title>PML</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="texteditor.css">
+        <meta charset="utf-8">
     </head>
     <body id="bodyDash">
            
@@ -31,7 +32,7 @@
             </div>
 
             <div id="download" class="icon">
-                <img src="Images/download_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="download" id="download-icon"/>
+                <img src="Images/download_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="download" id="download-icon" onclick="download()"/>
                 <span class="circle"></span>
             </div>
 
@@ -72,7 +73,7 @@
             <div id="overlay"></div>
 
             <div id="bodytop">
-                <div id="editorTop"><span class="agh">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton"><div id="line2"></div><span id="runcodespan">Run & Debug</span></div></div>
+                <div id="editorTop"><span class="agh">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton" onclick="parse()"><div id="line2"></div><span id="runcodespan">Run & Debug</span></div></div>
                 <div id="pdfTop" onclick="togglePrev('placeholder')"><span class="agh" id="agh1">Preview</span><span>/users/user/path/to/filename2</span></div>
                 <div id="errorsTop" onclick="togglePrev('debug')"><span class="agh" id="agh2">Debug</span></div>
             </div>
@@ -82,8 +83,15 @@
 
 
             <div id="bodycontent">
-                    <div id="editor" contenteditable="true"></div>
-                    <div id="placeholder" class="sidesizing" style="display: block;">Iframe placeholder</div>
+                    <div id="editor" contenteditable="true">[meta-name: This is a title]
+[meta-author: Stashey13 and lukewhite32]
+
+[-- Page 1]
+This is some text. 
+This is some really cool text.
+[break:]
+This is some more text to see if breaking is working.</div>
+                    <iframe id="placeholder" class="sidesizing" style="display: block;"></iframe>
                     <div id="debug" class="sidesizing" style="display: none;">Debug Panel</div>
             </div>
 
@@ -92,13 +100,17 @@
 
 
         <!-- Javascript -->
-        <script src="parser/token.js"></script>
-        <script src="parser/parser.js"></script>
+        <script src="https://github.com/devongovett/pdfkit/releases/download/v0.10.0/pdfkit.standalone.js"></script>
+        <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
+
+        <script src="parser/tokens.js"></script>
+        <script src="parser/tokenizer.js"></script>
         <script src="parser/pdfwriter.js"></script>
-        <script src="parser/pdfassembler.js"></script>
+        <script src="parser/main.js"></script>
 
         <script src="javascript/javascript.js"></script>
         <script src="javascript/dashboard.js"></script>
+
 
         <!-- Don't Delete-->
         <script>

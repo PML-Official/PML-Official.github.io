@@ -4,15 +4,17 @@ const TagIDs = {
     BREAK: 1,
     META_NAME: 2,
     META_AUTHOR: 3,
-    NEW_PAGE: 4
+    META_CREATOR: 4,
+    NEW_PAGE: 5
 }
 
 // The strings that directly correspond to the tokens
 const TagStrings = [
     "",
-    "break:",
+    "break",
     "meta-name:",
     "meta-author:",
+    "meta-creator:",
     "-- Page"
 ]
 
