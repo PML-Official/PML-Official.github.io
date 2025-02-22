@@ -59,7 +59,7 @@
 
             <div id="download" class="icon">
                 <img src="Images/download_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="download" id="download-icon" onclick="download()"/>
-                <span class="circle"></span>
+            <!--  <span class="circle"></span>-->
             </div>
 
             <div id="openFile" class="icon">
@@ -78,11 +78,17 @@
 
 
         <div id="overlay">
-            <div id="openNew">
-                Open Existing File
-            </div>
-            <div id="createNew">
-                Create New File
+            <img src="Images/PML White.png" alt="PML Logo" id="dashHomeLogo"/>
+            <div id="welcome">Welcome to PML</div>
+            <div id="optionsContain">
+                <div id="openNew" class="blue openingContain">
+                    <img src="Images/folder_open_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="open-file" id="openFileicon" class="blue"/>
+                    <span>Open Existing File</span>
+                </div>
+                <div id="createNew" class="blue openingContain">
+                    <img src="Images/open_in_new_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="new-file" id="newicon" class="blue"/>
+                    <span>Create New File</span>
+                </div>
             </div>
         </div>
 
@@ -127,7 +133,7 @@
         <div id="insideLeftContain">
 
         <div id="leftButtons">
-            <span class="agh" id="agh3">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton" onclick="parse()"><div id="line2"></div><span id="runcodespan">Run & Debug</span></div>
+            <span class="agh" id="agh3">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton" onclick="parse()"><div id="line2"></div><span id="runcodespan">Preview & Debug</span></div>
         </div>
 
             <div id="editorContain">

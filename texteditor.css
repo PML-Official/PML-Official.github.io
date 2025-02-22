@@ -28,8 +28,7 @@
 /**/
 #sidebar {position: absolute; left: 0; top: 0; bottom: 0; width: 45px; background-color: rgb(16, 16, 16); border-right: 1px solid rgba(81, 81, 81, 0.453); z-index: 999; display: flex; flex-direction: column; align-items: center;}
 
-/* overlay not yet in use */
- #overlay {background-color: rgb(32, 32, 32); position: absolute; display: block; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 100000; opacity: 1; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; color: white;}
+
 
 /* Body Content Total */   /* Container */
 #bodycontent {position: absolute; display: flex; bottom: 0; top: 45px; right: 0; left: 44px;}
@@ -64,3 +63,18 @@
 #runbutton {height: 34px; margin: none; cursor: pointer;}
 #line2 {height: 20px; width: 1px; background-color: rgb(65, 65, 65);}
 #runcodespan {margin-left: 8px!important; margin-right: 7px}
+
+
+
+/* Opening Page */
+
+#overlay {background-color: rgb(32, 32, 32); position: absolute; display: block; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 100000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
+.blue {filter: brightness(0) saturate(100%) invert(25%) sepia(97%) saturate(7471%) hue-rotate(220deg) brightness(97%) contrast(104%); cursor: pointer;}
+.blue:hover {text-decoration: underline;}
+.openingContain {display: flex; flex-direction: row; align-items: center; margin-top: 80px;}
+#createNew {margin-left: 89px;}
+.blue span {margin-left: 5px;}
+#dashHomeLogo {height: 140px; margin-top: 240px;}
+#optionsContain {display: flex; flex-direction: row; align-items: center;}
+#welcome {font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 35px; margin-top: 20px;}
+  
