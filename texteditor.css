@@ -6,27 +6,31 @@
 #dashText {margin-left: 41px; margin-bottom:4px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 18px;}
 #line {width: 1px; height: 29px; background-color: white; margin-left: 39px;}
 
-#backtohome {height: 24px; transform: rotate(180deg); margin-left: 3vw; transition: all 0.3s ease; margin-right: 10px;}
+#backtohome {height: 24px; transform: rotate(180deg); margin-left: 4vw; transition: all 0.3s ease; margin-right: 10px;}
 #backtohome:hover {height: 28px; cursor: pointer;}
 
 
 /* Menu */
 #saveicon, #download-icon, #openicon, #closeicon, #openFileicon, #newicon, #homeicon, #saveAsicon, #codeicon {height: 25px;} 
+#home, #save, #saveas, #download, #openFile, #newFile, #code, #open, #close {z-index: 100001; display: flex; position: relative;}
 .icon {border-radius: 1px; width: 100%; cursor: pointer; display: flex; flex-direction: column; align-items: center; padding-top: 7px; padding-bottom: 7px; position: relative;}
-#home:hover {background-color: rgb(64, 64, 64);}
-#save:hover {background-color: rgb(64, 64, 64);} 
-#saveas:hover {background-color: rgb(64, 64, 64);}
-#download:hover {background-color: rgb(64, 64, 64);}
-#openFile:hover {background-color: rgb(64, 64, 64);}
-#newFile:hover {background-color: rgb(64, 64, 64);}
-#code:hover {background-color: rgb(64, 64, 64);}
+.textSizing {position: absolute; right: 5px;}
+#home {background-color: rgb(32, 32, 32);}
+/*#save {background-color: rgb(64, 64, 64); width: 230px;} */
+/*
+
+#saveas:hover {background-color: rgb(64, 64, 64); width: 230px;}
+#download:hover {background-color: rgb(64, 64, 64); width: 230px;}
+#openFile:hover {background-color: rgb(64, 64, 64); width: 230px;}
+#newFile:hover {background-color: rgb(64, 64, 64); width: 230px;}
+*/
 #open, #close {margin-top: 6px}
 #close {display: none;}
 #home {margin-top: 45px!important;}
 #line3 {height: 1px; width: 80%; background-color: rgb(64, 64, 64); margin-top: 18px;}
 .circle {height: 9px; width: 9px; border-radius: 50%; background-color: rgb(188, 15, 15); top: 6px; position: absolute; right: 7px;}
 /**/
-#sidebar {position: absolute; left: 0; top: 0; bottom: 0; width: 45px; background-color: rgb(16, 16, 16); border-right: 1px solid rgba(81, 81, 81, 0.453); z-index: 999; display: flex; flex-direction: column; align-items: center;}
+#sidebar {position: absolute; left: 0; top: 0; bottom: 0; width: 45px; background-color: rgb(16, 16, 16); border-right: 1px solid rgba(81, 81, 81, 0.453); z-index: 100000; display: flex; flex-direction: column; align-items: center;}
 
 
 
@@ -68,9 +72,9 @@
 
 /* Opening Page */
 
-#overlay {background-color: rgb(32, 32, 32); position: absolute; display: block; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 100000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
-.blue {filter: brightness(0) saturate(100%) invert(25%) sepia(97%) saturate(7471%) hue-rotate(220deg) brightness(97%) contrast(104%); cursor: pointer;}
-.blue:hover {text-decoration: underline;}
+#overlay {background-color: rgb(32, 32, 32); position: absolute; display: block; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
+.blue { color: white; cursor: pointer;}
+.blue:hover {filter: brightness(0) saturate(100%) invert(25%) sepia(97%) saturate(7471%) hue-rotate(220deg) brightness(97%) contrast(104%);}
 .openingContain {display: flex; flex-direction: row; align-items: center; margin-top: 80px;}
 #createNew {margin-left: 89px;}
 .blue span {margin-left: 5px;}
