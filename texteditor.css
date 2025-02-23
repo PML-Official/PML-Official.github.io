@@ -12,11 +12,11 @@
 
 /* Menu */
 #saveicon, #download-icon, #openicon, #closeicon, #openFileicon, #newicon, #homeicon, #saveAsicon, #codeicon {height: 25px;} 
-#home, #save, #saveas, #download, #openFile, #newFile, #code, #open, #close {z-index: 100001; display: flex; position: relative;}
+#home, #save, #saveas, #download, #openFile, #newFile, #code, #open, #close {z-index: 100001;}
 .icon {border-radius: 1px; width: 100%; cursor: pointer; display: flex; flex-direction: column; align-items: center; padding-top: 7px; padding-bottom: 7px; position: relative;}
-.textSizing {position: absolute; right: 5px;}
+.textSizing {margin-left: 120px; position: absolute; color: white; margin-top: 3px;} 
 #home {background-color: rgb(32, 32, 32);}
-/*#save {background-color: rgb(64, 64, 64); width: 230px;} */
+#homeText, #codeText, #saveText, #downloadText, #openText, #newText, #saveAsText {display: none;}
 /*
 
 #saveas:hover {background-color: rgb(64, 64, 64); width: 230px;}
@@ -78,7 +78,7 @@
 .openingContain {display: flex; flex-direction: row; align-items: center; margin-top: 80px;}
 #createNew {margin-left: 89px;}
 .blue span {margin-left: 5px;}
-#dashHomeLogo {height: 140px; margin-top: 240px;}
+#dashHomeLogo {height: 140px; margin-top: 200px;}
 #optionsContain {display: flex; flex-direction: row; align-items: center;}
 #welcome {font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 35px; margin-top: 20px;}
   

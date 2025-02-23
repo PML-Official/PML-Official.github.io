@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () =>  {
     const textEditor = document.getElementById('editor');
     const saveAlert = document.getElementById('saveAlert');
     const save = document.getElementById('save');
+    const homeText = document.getElementById('homeText');
+    const codeText = document.getElementById('codeText'); 
 
     function showAlert() {
         saveAlert.style.display = "block";
@@ -47,6 +49,7 @@ function enableHomeHover() {
         if (overlay.style.display === 'none') {
             home.style.backgroundColor = 'rgb(64,64,64)';
             home.style.width = '230px';
+            homeText.style.display = 'block';
         }
     };
 
@@ -54,6 +57,7 @@ function enableHomeHover() {
         if (overlay.style.display === 'none') {
             home.style.backgroundColor = 'rgb(16, 16, 16)';
             home.style.width = '';
+            homeText.style.display = '';
         }
     };
 }
@@ -69,6 +73,7 @@ function enableButtonHover() {
         if (overlay.style.display === 'flex' || overlay.style.display === '') {
             button.style.backgroundColor = 'rgb(64,64,64)';
             button.style.width = '230px';
+            codeText.style.display = 'block';
         }
     };
 
@@ -76,6 +81,7 @@ function enableButtonHover() {
         if (overlay.style.display === 'flex' || overlay.style.display === '') {
             button.style.backgroundColor = 'rgb(16, 16, 16)';
             button.style.width = '';
+            codeText.style.display = '';
         }
     };
 }
@@ -112,26 +118,37 @@ const download = document.getElementById('download');
 const openFile = document.getElementById('openFile');
 const newFile = document.getElementById('newFile');
 
+const saveText = document.getElementById('saveText')
+const downloadText = document.getElementById('downloadText');
+const openText = document.getElementById('openText');
+const newText = document.getElementById('newText');
+const saveAsText = document.getElementById('saveAsText');
+
+
 // Save
 saves.onmouseover = function() {
     saves.style.backgroundColor = 'rgb(64, 64, 64)';
     saves.style.width = '230px';
+    saveText.style.display = 'block';
 };
 
 saves.onmouseout = function() {
     saves.style.backgroundColor = '';
     saves.style.width = '';
+    saveText.style.display = '';
 };
 
 // Save As
 saveas.onmouseover = function() {
     saveas.style.backgroundColor = 'rgb(64, 64, 64)';
     saveas.style.width = '230px';
+    saveAsText.style.display = 'block';
 };
 
 saveas.onmouseout = function() {
     saveas.style.backgroundColor = '';
     saveas.style.width = '';
+    saveAsText.style.display = '';
 };
 
 
@@ -139,11 +156,13 @@ saveas.onmouseout = function() {
 download.onmouseover = function() {
     download.style.backgroundColor = 'rgb(64, 64, 64)';
     download.style.width = '230px';
+    downloadText.style.display = 'block';
 };
 
 download.onmouseout = function() {
     download.style.backgroundColor = '';
     download.style.width = '';
+    downloadText.style.display = '';
 };
 
 
@@ -151,11 +170,13 @@ download.onmouseout = function() {
 openFile.onmouseover = function() {
     openFile.style.backgroundColor = 'rgb(64, 64, 64)';
     openFile.style.width = '230px';
+    openText.style.display = 'block';
 };
 
 openFile.onmouseout = function() {
     openFile.style.backgroundColor = '';
     openFile.style.width = '';
+    openText.style.display = '';
 };
 
 
@@ -163,11 +184,13 @@ openFile.onmouseout = function() {
 newFile.onmouseover = function() {
     newFile.style.backgroundColor = 'rgb(64, 64, 64)';
     newFile.style.width = '230px';
+    newText.style.display = 'block';
 };
 
 newFile.onmouseout = function() {
     newFile.style.backgroundColor = '';
     newFile.style.width = '';
+    newText.style.display = '';
 };
 
 
