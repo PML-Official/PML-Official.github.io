@@ -11,19 +11,12 @@
 
 
 /* Menu */
-#saveicon, #download-icon, #openicon, #closeicon, #openFileicon, #newicon, #homeicon, #saveAsicon, #codeicon {height: 25px;} 
-#home, #save, #saveas, #download, #openFile, #newFile, #code, #open, #close {z-index: 100001;}
+#download-icon, #openicon, #closeicon, #openFileicon, #newicon, #homeicon, #saveAsicon, #codeicon {height: 25px;} 
+#home, #saveas, #download, #openFile, #newFile, #code, #open, #close {z-index: 100001;}
 .icon {border-radius: 1px; width: 100%; cursor: pointer; display: flex; flex-direction: column; align-items: center; padding-top: 7px; padding-bottom: 7px; position: relative;}
 .textSizing {margin-left: 120px; position: absolute; color: white; margin-top: 3px;} 
 #home {background-color: rgb(32, 32, 32);}
-#homeText, #codeText, #saveText, #downloadText, #openText, #newText, #saveAsText {display: none;}
-/*
-
-#saveas:hover {background-color: rgb(64, 64, 64); width: 230px;}
-#download:hover {background-color: rgb(64, 64, 64); width: 230px;}
-#openFile:hover {background-color: rgb(64, 64, 64); width: 230px;}
-#newFile:hover {background-color: rgb(64, 64, 64); width: 230px;}
-*/
+#homeText, #codeText,  #downloadText, #openText, #newText, #saveAsText {display: none;}
 #open, #close {margin-top: 6px}
 #close {display: none;}
 #home {margin-top: 45px!important;}

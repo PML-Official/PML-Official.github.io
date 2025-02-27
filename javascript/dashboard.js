@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () =>  {
 
 // Save Button
@@ -57,7 +56,7 @@ function enableHomeHover() {
         if (overlay.style.display === 'none') {
             home.style.backgroundColor = 'rgb(16, 16, 16)';
             home.style.width = '';
-            homeText.style.display = '';
+            homeText.style.display = 'none';
         }
     };
 }
@@ -66,6 +65,7 @@ function disableHomeHover() {
     home.onmouseover = null;
     home.onmouseout = null;
     home.style.width = '';
+    homeText.style.display = 'none'
 }
 
 function enableButtonHover() {
@@ -81,7 +81,7 @@ function enableButtonHover() {
         if (overlay.style.display === 'flex' || overlay.style.display === '') {
             button.style.backgroundColor = 'rgb(16, 16, 16)';
             button.style.width = '';
-            codeText.style.display = '';
+            codeText.style.display = 'none';
         }
     };
 }
@@ -90,6 +90,7 @@ function disableButtonHover() {
     button.onmouseover = null;
     button.onmouseout = null;
     button.style.width = '';
+    codeText.style.display = 'none';
 }
 
 button.addEventListener('click', () => {
@@ -112,31 +113,17 @@ enableButtonHover();
 
 // Side Menu Hovering
 
-const saves = document.getElementById('save');
+
 const saveas = document.getElementById('saveas');
 const download = document.getElementById('download');
 const openFile = document.getElementById('openFile');
 const newFile = document.getElementById('newFile');
 
-const saveText = document.getElementById('saveText')
+
 const downloadText = document.getElementById('downloadText');
 const openText = document.getElementById('openText');
 const newText = document.getElementById('newText');
 const saveAsText = document.getElementById('saveAsText');
-
-
-// Save
-saves.onmouseover = function() {
-    saves.style.backgroundColor = 'rgb(64, 64, 64)';
-    saves.style.width = '230px';
-    saveText.style.display = 'block';
-};
-
-saves.onmouseout = function() {
-    saves.style.backgroundColor = '';
-    saves.style.width = '';
-    saveText.style.display = '';
-};
 
 // Save As
 saveas.onmouseover = function() {
@@ -215,4 +202,4 @@ newFile.onmouseout = function() {
 
 
 
-})
+});
