@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () =>  {
-
+/*
 // Save Button
 
     const textEditor = document.getElementById('editor');
@@ -21,19 +21,13 @@ document.addEventListener('DOMContentLoaded', () =>  {
     textEditor.addEventListener("paste", showAlert);
 
     save.addEventListener("click", hideAlert);
-
+*/
 // Back to website Button
 
     const backhome = document.getElementById('backtohome');
 
     backhome.addEventListener('click', () => {
-        let result = confirm("If you proceed without saving your PML, your progress will be lost");
-        if (result) {
-            window.location.href = "https://pml-official.github.io"
-        } else {
-            // Do nothing
-        }
-        
+            window.location.href = "https://pml-official.github.io"     
     });
 
 

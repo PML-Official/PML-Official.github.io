@@ -53,19 +53,21 @@
 #leftButtons {width: 100%; height: 30px; background-color: rgb(16, 16, 16); display: flex; flex-direction: row; align-items: center;}
 #leftButtons span {color: rgba(255, 255, 255, 0.641); margin-left: 3vw;}
 #agh3 {margin-left: 1vw!important;}
+#runSettings {height: 15px; margin-left: 0px; margin-right: 5px;}
 
 #editor {bottom: 0; left: 0; right: 0; top: 30px; position: absolute; outline: none; font-size: 13px; padding-top: 16px; padding-left: 18px; background-color: rgb(29, 29, 29); color: white; border: 1px solid rgba(81, 81, 81, 0.453); border-left: none; font-family: monospace; overflow-y: auto; white-space: pre; user-select: text; line-height: 18px;} 
 
 #runcode {height: 15px; background-color: rgb(32, 32, 32); color: white; display: flex; flex-direction: row; align-items: center; padding: 2px; padding-right: 2px; padding-left: 2px; border-radius: 3px; font-size: 13px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; border: 1px solid rgb(65, 65, 65); margin-left: 5vw;}
-#runbutton {height: 34px; margin: none; cursor: pointer;}
+.runbutton {height: 26px; margin: none; cursor: pointer; margin-top: 2px;}
 #line2 {height: 20px; width: 1px; background-color: rgb(65, 65, 65);}
 #runcodespan {margin-left: 8px!important; margin-right: 7px}
+#runbutton2 {display: none; margin-top: 1px!important;}
 
 
 
 /* Opening Page */
-
-#overlay {background-color: rgb(32, 32, 32); position: absolute; display: block; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
+                                                                    /**//**//**/
+#overlay {background-color: rgb(32, 32, 32); position: absolute; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
 .blue { color: white; cursor: pointer;}
 .blue:hover {filter: brightness(0) saturate(100%) invert(25%) sepia(97%) saturate(7471%) hue-rotate(220deg) brightness(97%) contrast(104%);}
 .openingContain {display: flex; flex-direction: row; align-items: center; margin-top: 80px;}
