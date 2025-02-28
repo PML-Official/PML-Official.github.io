@@ -1,4 +1,4 @@
-/* Dashboard Top Navigation */
+/* Dashboard Top Navigation and Global Styles */
 #bodyDash {background-color: rgb(32, 32, 32);}
 #dashboardTop {height: 45px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center; position: absolute; z-index: 1000; right: 0; left: 0; border-bottom: 1px solid rgba(81, 81, 81, 0.453);}
 #logoHeight {height: 40px!important; margin-left: 0!important; cursor: default!important;}
@@ -8,6 +8,9 @@
 
 #backtohome {height: 24px; transform: rotate(180deg); margin-left: 4vw; transition: all 0.3s ease; margin-right: 10px;}
 #backtohome:hover {height: 28px; cursor: pointer;}
+
+
+code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(49, 49, 49);}
 
 
 /* Menu */
@@ -68,12 +71,16 @@
 /* Opening Page */
                                                                     /**//**//**/
 #overlay {background-color: rgb(32, 32, 32); position: absolute; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
-.blue { color: white; cursor: pointer;}
-.blue:hover {filter: brightness(0) saturate(100%) invert(25%) sepia(97%) saturate(7471%) hue-rotate(220deg) brightness(97%) contrast(104%);}
-.openingContain {display: flex; flex-direction: row; align-items: center; margin-top: 80px;}
-#createNew {margin-left: 89px;}
+.grey {color: rgb(174, 174, 174); cursor: pointer; display: flex; flex-direction: row; align-items: center; margin-top: 15px;}
+.openingContain {display: flex; flex-direction: row; align-items: left; margin-top: 80px; padding: none; height: fit-content; width: fit-content;}
+.openingContain ul {padding: 0!important; list-style-type: none;}
+#openingRight {margin-left: 159px!important;}
 .blue span {margin-left: 5px;}
-#dashHomeLogo {height: 140px; margin-top: 200px;}
+#dashHomeLogo {height: 90px; margin-top: 150px;}
 #optionsContain {display: flex; flex-direction: row; align-items: center;}
-#welcome {font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 35px; margin-top: 20px;}
-  
+#welcome {font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 30px; margin-top: 20px;}
+
+.title {font-size: 18px; margin-bottom: 50px;}
+
+.grey:hover {color: rgb(236, 236, 236);}
+
