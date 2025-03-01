@@ -14,11 +14,11 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 
 /* Menu */
 #download-icon, #openicon, #closeicon, #openFileicon, #newicon, #homeicon, #saveAsicon, #codeicon {height: 25px;} 
-#home, #saveas, #download, #openFile, #newFile, #code, #open, #close {z-index: 100001;}
+#home, #saveas, #download, #code, #open, #close {z-index: 100001;}
 .icon {border-radius: 1px; width: 100%; cursor: pointer; display: flex; flex-direction: column; align-items: center; padding-top: 7px; padding-bottom: 7px; position: relative;}
-.textSizing {margin-left: 120px; position: absolute; color: white; margin-top: 3px;} 
+.textSizing {margin-left: 120px; position: absolute; color: white;} 
 #home {background-color: rgb(32, 32, 32);}
-#homeText, #codeText,  #downloadText, #openText, #newText, #saveAsText {display: none;}
+#homeText, #codeText, #downloadText, #saveAsText {display: none; margin: none;}
 #open, #close {margin-top: 6px}
 #close {display: none;}
 #home {margin-top: 45px!important;}
