@@ -31,7 +31,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 
 /* Body Content Total */   /* Container */
 #bodycontent {position: absolute; display: flex; bottom: 0; top: 45px; right: 0; left: 44px;}
-/**/
+/**/ 
 
 /* Right */
 #pageright {width: 40%; min-width: 680px;}
@@ -45,6 +45,8 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 #agh1 {margin-left: 14px!important;} #agh2 {margin-left: 14px!important;}
 #errorsTop {height: 30px; cursor: pointer; width: 30%; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453);  color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; }
 #placeholder {border: none;}
+
+#toolbarButton {margin-left: 130px; display: flex; align-items: center; flex-direction: row;}
 
 
 /* global */
@@ -75,7 +77,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 #runcodespan {margin-left: 8px!important; margin-right: 7px}
 #runbutton2 {display: none; margin-top: 1px!important;}
 
-
+#push {height: 20px; margin-left: 5px; cursor: pointer;}
 
 /* Opening Page */
                                                                     /**//**//**/

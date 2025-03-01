@@ -1,37 +1,26 @@
-var doc = new PDFDocument();
-var pdfWriter = new PDFWriter(doc);
+var doc;
+var pdfWriter;
 var blob;
-var isRealTimeEnabled = false;
-var editor = document.getElementById('editor');
-
+var isRealTimeEnabled = false; 
+var isToolbarHidden = false; 
+var editor; 
 
 function parse() {
     doc = new PDFDocument();
     const stream = doc.pipe(blobStream());
-
     pdfWriter = new PDFWriter(doc);
 
     stream.on("finish", function() {
         blob = stream.toBlob("application/pdf");
-
-        const url = stream.toBlobURL("application/pdf") + "#toolbar=0";
-        const iframe = document.getElementById("placeholder");
-        // Checking for Errors
-        if (!iframe) {
-            console.error("Error: iframe with id 'placholder' not found")
-            return;
-        }
-        iframe.src = url;
+        updateIframe(); 
     });
 
-    // Checking for Errors
-
     if (!editor) {
-        console.error("Error: Editor element with ID 'editor' not found")
+        console.error("Error: Editor element with ID 'editor' not found in the document.");
         return;
     }
 
-    var parser = new Tokenizer(document.getElementById("editor").innerText);
+    var parser = new Tokenizer(editor.innerText);
     parser.parse(editor.innerText);
 
     pdfWriter.writeMetadataProducer("PML (PDF Markup Language)");
@@ -59,50 +48,118 @@ function parse() {
     pdfWriter.end();
 }
 
+function updateIframe() {
+    const iframe = document.getElementById("placeholder");
+    if (!iframe) {
+        console.error("Error: Placeholder iframe with ID 'placeholder' not found in the document.");
+        return;
+    }
+    if (!blob) {
+        console.warn("No PDF blob available to display.");
+        return;
+    }
+    const url = URL.createObjectURL(blob) + (isToolbarHidden ? "#toolbar=0" : "");
+    iframe.src = url;
+}
+
 function download() {
     pdfWriter.download(blob);
 }
 
 function toggleRealTime() {
     if (!editor) {
-        console.error("Error: Cannot toggle real time updates; editor element not found.")
+        console.error("Error: Cannot toggle real-time updates; editor element not found.");
         return;
     }
 
     isRealTimeEnabled = !isRealTimeEnabled;
-    const runButton = document.getElementById('runbutton');
-    const runText = document.getElementById('runcodespan');
-    const start = document.getElementById('runbutton1');
-    const stop = document.getElementById('runbutton2');
+    const runButton = document.getElementById("runbutton");
+    const buttonText = document.getElementById("runcodespan");
+    const buttonPlay = document.getElementById("runbutton1");
+    const buttonPause = document.getElementById("runbutton2");
     if (isRealTimeEnabled) {
         editor.addEventListener("input", parse);
         console.log("Real-time parsing enabled.");
-        runText.style.color = 'lightgreen';
-        start.style.display = 'none';
-        stop.style.display = 'block';
+        buttonPlay.style.display = 'none';
+        buttonPause.style.display = 'block';
+        buttonText.style.color = 'lightGreen';
     } else {
         editor.removeEventListener("input", parse);
         console.log("Real-time parsing disabled.");
-        runText.style.color = '';
-        start.style.display = 'block';
-        stop.style.display = 'none';
+        buttonPause.style.display = 'none';
+        buttonPlay.style.display = 'block';
+        buttonText.style.color = '';
     }
 }
 
-const runButton = document.getElementById("runbutton");
-if (runButton) {
-    runButton.addEventListener("click", toggleRealTime);
-} else {
-    console.error("Error: Run button with ID 'runbutton' not found in document.")
+function toggleToolbar() {
+    isToolbarHidden = !isToolbarHidden;
+    const toolbarButton = document.getElementById("toolbarButton");
+    if (isToolbarHidden) {
+        toolbarButton.textContent = "Show Toolbar";
+        console.log("PDF toolbar hidden.");
+    } else {
+        toolbarButton.textContent = "Hide Toolbar";
+        console.log("PDF toolbar shown.");
+    }
+    updateIframe(); 
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    editor = document.getElementById("editor");
+
+    const runButton = document.getElementById("runbutton");
+    if (runButton) {
+        runButton.addEventListener("click", toggleRealTime);
+    } else {
+        console.error("Error: Run button with ID 'runbutton' not found in the document.");
+    }
+
+    const toolbarButton = document.getElementById("toolbarButton");
+    if (toolbarButton) {
+        toolbarButton.addEventListener("click", toggleToolbar);
+        toolbarButton.textContent = "Hide Toolbar"; 
+    } else {
+        console.error("Error: Toolbar button with ID 'toolbarButton' not found in the document.");
+    }
+
+    // File loading functionality
+    const dashOpen = document.getElementById("dashOpen");
+    const fileInput = document.getElementById("fileInput");
+    const overlay = document.getElementById("overlay");
+    if (dashOpen && fileInput) {
+        dashOpen.addEventListener("click", () => {
+            fileInput.click();
+        });
+        fileInput.addEventListener("change", () => {
+            const file = fileInput.files[0];
+            if (file && file.name.endsWith(".pml")) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    editor.innerText = event.target.result;
+                    parse(); 
+                    overlay.style.display = 'none';
+                };
+                reader.readAsText(file);
+                fileInput.value = ""; 
+            } else {
+                alert("Please select a .pml file.");
+            }
+        });
+    } else {
+        console.error("Error: dashOpen or fileInput element not found in the document.");
+    }
+
+    if (editor) {
+        parse();
+    } else {
+        console.error("Error: Initial parse skipped; editor not found.");
+    }
+});
+
+const push = document.getElementById("push");
+push.addEventListener("click", () => {
+    console.log("PML Pushed");
+});
 
 
-
-
-parse();
-
-
-// document.getElementById("editor").addEventListener('input', () => {
-//     parse();
-// });

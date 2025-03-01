@@ -2,8 +2,9 @@
 <html>
     <head>
         <title>PML Dashboard</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="texteditor.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/texteditor.css">
+        <link rel="stylesheet" href="css/tooltips.css">
         <link rel="icon" type="image/png" href="Images/PML White.png">
 
         <meta charset="UTF-8">
@@ -56,8 +57,7 @@
 
             <div id="download" class="icon">
                 <img src="Images/download_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="download" id="download-icon" onclick="download()"/>
-            <!--  <span class="circle"></span>-->
-            <span class="circle" id="saveAlert" style="display: none;"></span>
+            <!-- -->
                 <div class="textSizing">
                     <div id="downloadText">Download</div>
                 </div>
@@ -85,6 +85,7 @@
                         <li class="grey" id="dashOpen">
                             <span>Open Existing <code>.pml</code> File</span>
                         </li>
+                        <input type="file" id="fileInput" accept=".pml" style="display: none;">
                         <li class="grey" id="dashCreate">
                             <span>Create New <code>.pml</code> File</span>
                         </li>
@@ -138,21 +139,12 @@
         <div id="insideLeftContain">
 
         <div id="leftButtons">
-            <span class="agh" id="agh3">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><div id="runbutton"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton1" class="runbutton"><img src="Images/stop_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="stop" id="runbutton2" class="runbutton"></div><div id="line2"></div><span id="runcodespan">Auto Run & Debug</span><!--<img src="Images/settings_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="run settings" id="runSettings">--></div>             
+            <span class="agh" id="agh3">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><div id="runbutton"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton1" class="runbutton"><img src="Images/stop_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="stop" id="runbutton2" class="runbutton"></div><div id="line2"></div><span id="runcodespan">Auto Run & Debug</span></div><img src="Images/sync_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="push code" id="push" onclick="parse()">           
         </div>
 
             <div id="editorContain">
                 <div id="editor" contenteditable="true">
-[meta-name: This is a title]
-[meta-author: Stashey13 and lukewhite32]
-                        
-[-- Page 1]
-                        
-This is some text. 
-This is some really cool text.
-[break:]
-[break:]
-[break: it also works for some reason when you have text inside of a break] 
+
                        
 
                 </div>
@@ -173,11 +165,10 @@ This is some really cool text.
             <div id="rightButtons">
                 <div id="pdfTop" onclick="togglePrev('placeholder')"><span class="agh" id="agh1">Preview</span><span id="pdfPath">/users/user/path/to/filename2</span>
                     <div id="toolbarButton">
-                        <img src="Images/radio_button_checked_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Check" id="previewChecked"/>
-                        <img src="Images/radio_button_unchecked_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Check" id="previewUnchecked"/>
+                        Toggle Menu
                     </div>
                 </div>
-                <div id="errorsTop" onclick="togglePrev('debug')"><span class="agh" id="agh2">Debug</span></div>
+                <div id="errorsTop" onclick="togglePrev('debug')"><span class="agh" id="agh2">Console</span><span class="circle"></span></div>
             </div>
 
             <div id="iframeContain">
@@ -223,6 +214,7 @@ This is some really cool text.
                 const pdfTop = document.getElementById('pdfTop');
                 const errorsTop = document.getElementById('errorsTop');
                 const pdfPath = document.getElementById('pdfPath');
+                const toolbarButton = document.getElementById('toolbarButton');
             
                 placeholder.style.display = 'none';
                 debug.style.display = 'none';
@@ -241,11 +233,13 @@ This is some really cool text.
                     pdfTop.style.width = '70%';
                     errorsTop.style.width = '30%';
                     pdfPath.style.display = 'block';
+                    toolbarButton.style.display = 'block';
                 } else if (divId === 'debug') {
                     errorsTop.style.backgroundColor = 'rgb(32, 32, 32)';
                     errorsTop.style.width = '70%';
                     pdfTop.style.width = '30%';
                     pdfPath.style.display = 'none';
+                    toolbarButton.style.display = 'none';
                 }
             }
             
