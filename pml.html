@@ -28,10 +28,6 @@
 
 
 <!-- Sidebar  -->
-
-
-
-
         <div id="sidebar">
 <!--
             <div id="open" class="icon">
@@ -57,35 +53,13 @@
                     <div id="codeText">Code</div>
                 </div>
             </div>
-<!--
-            <div id="save" class="icon">
-                <img src="Images/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Save" id="saveicon"/>
-                
-                <div class="textSizing">
-                    <div id="saveText">Save</div>
-                </div>
-            </div>
-        -->
+
             <div id="download" class="icon">
                 <img src="Images/download_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="download" id="download-icon" onclick="download()"/>
             <!--  <span class="circle"></span>-->
             <span class="circle" id="saveAlert" style="display: none;"></span>
                 <div class="textSizing">
                     <div id="downloadText">Download</div>
-                </div>
-            </div>
-
-            <div id="openFile" class="icon">
-                <img src="Images/folder_open_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="open-file" id="openFileicon"/>
-                <div class="textSizing">
-                    <div id="openText">Open File</div>
-                </div>
-            </div>
-
-            <div id="newFile" class="icon">
-                <img src="Images/open_in_new_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="new-file" id="newicon"/>
-                <div class="textSizing">
-                    <div id="newText">New File</div>
                 </div>
             </div>
 
@@ -98,7 +72,7 @@
 
         </div>
 
-
+<!-- Overlay -->
         <div id="overlay">
             <img src="Images/PML White.png" alt="PML Logo" id="dashHomeLogo"/>
             <div id="welcome">Welcome to PML</div>
@@ -136,34 +110,25 @@
 
 
 <!-- Dashboard Top Navigation -->
-
-
-
-
-
-
          <div id="dashboardTop">
             <img src="Images/double_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="backtohome-logo" id="backtohome">
     
                     <img src="Images/PML White.png" alt="pml-logo" class="logo" id="logoHeight">
                     <div id="line"></div>
-                <div id="contain01">
                     <div id="dashText">
                         Dashboard
                     </div>
-                </div>
-       
+                       
 
         </div>
 
          
     
-<!-- Everything Else -->
+
             
 
 
 <!--Body Content-->
-
 <div id="bodycontent">
 
 
@@ -187,18 +152,9 @@ This is some text.
 This is some really cool text.
 [break:]
 [break:]
-Just so you know, it doesn't stack on top of each other when you have two breaks. I dont know if we want it to do that?
 [break: it also works for some reason when you have text inside of a break] 
                        
-                        
-Also, can you make it where before it automatically downloads you select where the download will go? 
-(When you press the button)
-[break:]
-In the future, you see where next to code it says "/users/user/path/to/filename'?  well when they select their pml file 
-in their computer, the file path on their computer will be right there if possible. same thing next to preview. 
 
-[break:] 
-just so you know, the reason the text is spaced wacky like this, is because there are spaces in the empty lines. We need to fix that somehow.
                 </div>
             </div>
 
@@ -215,7 +171,13 @@ just so you know, the reason the text is spaced wacky like this, is because ther
         <div id="insideRightContain">
 
             <div id="rightButtons">
-                <div id="pdfTop" onclick="togglePrev('placeholder')"><span class="agh" id="agh1">Preview</span><span>/users/user/path/to/filename2</span></div><div id="errorsTop" onclick="togglePrev('debug')"><span class="agh" id="agh2">Debug</span></div>
+                <div id="pdfTop" onclick="togglePrev('placeholder')"><span class="agh" id="agh1">Preview</span><span id="pdfPath">/users/user/path/to/filename2</span>
+                    <div id="toolbarButton">
+                        <img src="Images/radio_button_checked_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Check" id="previewChecked"/>
+                        <img src="Images/radio_button_unchecked_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Check" id="previewUnchecked"/>
+                    </div>
+                </div>
+                <div id="errorsTop" onclick="togglePrev('debug')"><span class="agh" id="agh2">Debug</span></div>
             </div>
 
             <div id="iframeContain">
@@ -240,21 +202,7 @@ just so you know, the reason the text is spaced wacky like this, is because ther
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- Javascript -->
-
-
-
-
         <script src="https://github.com/devongovett/pdfkit/releases/download/v0.10.0/pdfkit.standalone.js"></script>
         <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
 
@@ -269,28 +217,45 @@ just so you know, the reason the text is spaced wacky like this, is because ther
 
         <!-- Don't Delete-->
         <script>
-             function togglePrev(divId) {
-
-            document.getElementById('placeholder').style.display = 'none';
-            document.getElementById('debug').style.display = 'none';
-
-            document.getElementById('pdfTop').style.backgroundColor = '';
-            document.getElementById('errorsTop').style.backgroundColor = '';
-
-            const targetDiv = document.getElementById(divId);
-            targetDiv.style.display = 'block';
-
-            if (divId === 'placeholder') {
-                document.getElementById('pdfTop').style.backgroundColor = 'rgb(32, 32, 32)';
-            } else if (divId === 'debug') {
-                document.getElementById('errorsTop').style.backgroundColor = 'rgb(32, 32, 32)';
+            function togglePrev(divId) {
+                const placeholder = document.getElementById('placeholder');
+                const debug = document.getElementById('debug');
+                const pdfTop = document.getElementById('pdfTop');
+                const errorsTop = document.getElementById('errorsTop');
+                const pdfPath = document.getElementById('pdfPath');
+            
+                placeholder.style.display = 'none';
+                debug.style.display = 'none';
+            
+                pdfTop.style.backgroundColor = '';
+                errorsTop.style.backgroundColor = '';
+            
+                const targetDiv = document.getElementById(divId);
+                targetDiv.style.display = 'block';
+            
+                pdfTop.style.transition = 'width 0.3s ease-out';
+                errorsTop.style.transition = 'width 0.3s ease-out';
+            
+                if (divId === 'placeholder') {
+                    pdfTop.style.backgroundColor = 'rgb(32, 32, 32)';
+                    pdfTop.style.width = '70%';
+                    errorsTop.style.width = '30%';
+                    pdfPath.style.display = 'block';
+                } else if (divId === 'debug') {
+                    errorsTop.style.backgroundColor = 'rgb(32, 32, 32)';
+                    errorsTop.style.width = '70%';
+                    pdfTop.style.width = '30%';
+                    pdfPath.style.display = 'none';
+                }
             }
-        }
-
-        window.onload = function () {
-            document.getElementById('pdfTop').style.backgroundColor = 'rgb(32, 32, 32)';
-        };
-        </script>
+            
+            window.onload = function () {
+                const pdfTop = document.getElementById('pdfTop');
+                pdfTop.style.backgroundColor = 'rgb(32, 32, 32)';
+                pdfTop.style.transition = 'width 0.3s ease-out';
+                document.getElementById('errorsTop').style.transition = 'width 0.3s ease-in-out';
+            };
+            </script>
 
     </body>
 </html>

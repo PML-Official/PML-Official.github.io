@@ -2,8 +2,7 @@
 #bodyDash {background-color: rgb(32, 32, 32);}
 #dashboardTop {height: 45px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center; position: absolute; z-index: 1000; right: 0; left: 0; border-bottom: 1px solid rgba(81, 81, 81, 0.453);}
 #logoHeight {height: 40px!important; margin-left: 0!important; cursor: default!important;}
-#contain01 {color: white;}
-#dashText {margin-left: 41px; margin-bottom:4px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 18px;}
+#dashText {margin-left: 41px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 18px; color: white;}
 #line {width: 1px; height: 29px; background-color: white; margin-left: 39px;}
 
 #backtohome {height: 24px; transform: rotate(180deg); margin-left: 4vw; transition: all 0.3s ease; margin-right: 10px;}
@@ -41,11 +40,21 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 #rightButtons {position: absolute; top: 0; right: 0; left: 0; display: flex; width: 100%;}
 .rightsidesizing {width: 99%; height: 99%;}
 .agh {font-size: 17px!important; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif!important; margin-left: 5px!important; color: white!important;}
-#pdfTop {height: 30px; width: 50%; cursor: pointer; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453); color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; }
+#pdfTop {height: 30px; width: 70%; cursor: pointer; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453); color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; }
 #pdfTop span {margin-left: 3vw}
 #agh1 {margin-left: 14px!important;} #agh2 {margin-left: 14px!important;}
-#errorsTop {height: 30px; width: 50%; cursor: pointer; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453);  color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; }
-#placeholder {border: none; }
+#errorsTop {height: 30px; cursor: pointer; width: 30%; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453);  color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; }
+#placeholder {border: none;}
+
+
+/* global */
+
+#pdfTop, #errorsTop {
+    transition: width 0.3s ease-out!important; 
+}
+
+
+
 
 
 
@@ -71,7 +80,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 /* Opening Page */
                                                                     /**//**//**/
 #overlay {background-color: rgb(32, 32, 32); position: absolute; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
-.grey {color: rgb(174, 174, 174); cursor: pointer; display: flex; flex-direction: row; align-items: center; margin-top: 15px;}
+.grey {color: rgb(174, 174, 174); cursor: pointer; display: flex; flex-direction: row; align-items: center; margin-top: 10px;}
 .openingContain {display: flex; flex-direction: row; align-items: left; margin-top: 80px; padding: none; height: fit-content; width: fit-content;}
 .openingContain ul {padding: 0!important; list-style-type: none;}
 #openingRight {margin-left: 159px!important;}

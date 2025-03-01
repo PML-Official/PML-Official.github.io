@@ -14,7 +14,7 @@ function parse() {
     stream.on("finish", function() {
         blob = stream.toBlob("application/pdf");
 
-        const url = stream.toBlobURL("application/pdf");
+        const url = stream.toBlobURL("application/pdf") + "#toolbar=0";
         const iframe = document.getElementById("placeholder");
         // Checking for Errors
         if (!iframe) {

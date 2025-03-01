@@ -112,8 +112,6 @@ enableButtonHover();
 
 const saveas = document.getElementById('saveas');
 const download = document.getElementById('download');
-const openFile = document.getElementById('openFile');
-const newFile = document.getElementById('newFile');
 
 const downloadText = document.getElementById('downloadText');
 const openText = document.getElementById('openText');
@@ -157,64 +155,7 @@ download.onmouseout = function() {
     downloadText.style.display = '';
 };
 
-// Open File
-let openFileTimeout;
-openFile.onmouseover = function() {
-    clearTimeout(openFileTimeout);
-    openFileTimeout = setTimeout(() => {
-        openFile.style.width = '230px';
-        openText.style.display = 'block';
-    }, 1000);
-    dashOpen.style.color = 'white';
-    openFile.style.backgroundColor = 'rgb(64, 64, 64)';
-};
-openFile.onmouseout = function() {
-    clearTimeout(openFileTimeout);
-    openFile.style.backgroundColor = '';
-    openFile.style.width = '';
-    openText.style.display = '';
-    dashOpen.style.color = '';
-};
 
-// New File
-let newFileTimeout;
-newFile.onmouseover = function() {
-    clearTimeout(newFileTimeout);
-    newFileTimeout = setTimeout(() => {
-        newFile.style.width = '230px';
-        newText.style.display = 'block';
-    }, 1000);
-    dashCreate.style.color = 'white';
-    newFile.style.backgroundColor = 'rgb(64, 64, 64)';
-};
-newFile.onmouseout = function() {
-    clearTimeout(newFileTimeout);
-    newFile.style.backgroundColor = '';
-    newFile.style.width = '';
-    newText.style.display = '';
-    dashCreate.style.color = '';
-};
-
-// Dashboard Open Existing
-
-dashOpen.onmouseover = function() {
-    openFile.style.backgroundColor = 'rgb(64, 64, 64)';
-}
-
-dashOpen.onmouseout = function() {
-    openFile.style.backgroundColor = '';
-}
-
-
-// Dashboard Create New
-
-dashCreate.onmouseover = function() {
-    newFile.style.backgroundColor = 'rgb(64, 64, 64)';
-}
-
-dashCreate.onmouseout = function() {
-    newFile.style.backgroundColor = '';
-}
 
 
 
