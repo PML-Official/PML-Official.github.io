@@ -12,26 +12,73 @@
 code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(49, 49, 49);}
 
 
+
+/* Opening Page */
+                                                                    /**//**//**/
+#overlay {background-color: rgb(32, 32, 32); position: absolute; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
+.grey {color: rgb(174, 174, 174); cursor: pointer; display: flex; flex-direction: row; align-items: center; margin-top: 10px;}
+.openingContain {display: flex; flex-direction: row; align-items: left; margin-top: 80px; padding: none; height: fit-content; width: fit-content;}
+.openingContain ul {padding: 0!important; list-style-type: none;}
+#openingRight {margin-left: 159px!important;}
+.blue span {margin-left: 5px;}
+#dashHomeLogo {height: 70px; margin-top: 150px;}
+#optionsContain {display: flex; flex-direction: row; align-items: center;}
+#welcome {font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 27px; margin-top: 20px;}
+                                                                    
+.title {font-size: 18px; margin-bottom: 50px;}
+                                                                    
+.grey:hover {color: rgb(236, 236, 236);}
+
+
+
+
 /* Menu */
-#download-icon, #openicon, #closeicon, #openFileicon, #newicon, #homeicon, #saveAsicon, #codeicon {height: 25px;} 
-#home, #saveas, #download, #code, #open, #close {z-index: 100001;}
+
+
+/* 
+#download-icon, #homeicon, #saveAsicon, #codeicon   --   Physical Image Icons
+--
+.icon
+#home, #saveas, #download, #code   --   Containers of everything
+--
+#homeText, #codeText, #downloadText, #saveAsText   --   The Tooltip Text
+.textSizing   --   Container of Tooltip
+*/
+
+
+#download-icon, #homeicon, #saveAsicon, #codeicon {height: 25px;} 
+#home, #saveas, #download, #code {z-index: 100001;}
+#homeText, #codeText, #downloadText, #saveAsText {margin: none;}
 .icon {border-radius: 1px; width: 100%; cursor: pointer; display: flex; flex-direction: column; align-items: center; padding-top: 7px; padding-bottom: 7px; position: relative; transition: width 0.1s ease!important;}
-.textSizing {margin-left: 120px; position: absolute; color: white;} 
+/* Tooltip! */
+.textSizing {left: 100%; top: 50%; transform: translateY(-50%); margin-left: 10px; padding: 2px 6px; border-radius: 4px; font-size: 13px; white-space: nowrap; background-color: #333; position: absolute; color: white; display: none;} 
+.textSizing::after {content: ''; position: absolute; right: 100%; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right-color: #333;}
+
 #home {background-color: rgb(32, 32, 32);}
-#homeText, #codeText, #downloadText, #saveAsText {display: none; margin: none;}
-#open, #close {margin-top: 6px}
-#close {display: none;}
+
 #home {margin-top: 45px!important;}
 #line3 {height: 1px; width: 80%; background-color: rgb(64, 64, 64); margin-top: 18px;}
+
 .circle {height: 9px; width: 9px; border-radius: 50%; background-color: rgb(188, 15, 15); top: 6px; position: absolute; right: 7px;}
-/**/
+
 #sidebar {position: absolute; left: 0; top: 0; bottom: 0; width: 45px; background-color: rgb(16, 16, 16); border-right: 1px solid rgba(81, 81, 81, 0.453); z-index: 100000; display: flex; flex-direction: column; align-items: center;}
+
+
+
+
+
+
+
 
 
 
 /* Body Content Total */   /* Container */
 #bodycontent {position: absolute; display: flex; bottom: 0; top: 45px; right: 0; left: 44px;}
 /**/ 
+
+
+
+
 
 /* Right */
 #pageright {width: 40%; min-width: 680px;}
@@ -47,19 +94,6 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 #placeholder {border: none;}
 
 #toolbarButton {margin-left: 130px; display: flex; align-items: center; flex-direction: row;}
-
-
-/* global */
-
-#pdfTop, #errorsTop {
-    transition: width 0.3s ease-out!important; 
-}
-
-
-
-
-
-
 
 /* Left */
 #pageleft {flex-grow: 1; min-width: 450px; height: 100%;}
@@ -79,19 +113,10 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 
 #push {height: 20px; margin-left: 5px; cursor: pointer;}
 
-/* Opening Page */
-                                                                    /**//**//**/
-#overlay {background-color: rgb(32, 32, 32); position: absolute; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
-.grey {color: rgb(174, 174, 174); cursor: pointer; display: flex; flex-direction: row; align-items: center; margin-top: 10px;}
-.openingContain {display: flex; flex-direction: row; align-items: left; margin-top: 80px; padding: none; height: fit-content; width: fit-content;}
-.openingContain ul {padding: 0!important; list-style-type: none;}
-#openingRight {margin-left: 159px!important;}
-.blue span {margin-left: 5px;}
-#dashHomeLogo {height: 90px; margin-top: 150px;}
-#optionsContain {display: flex; flex-direction: row; align-items: center;}
-#welcome {font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 30px; margin-top: 20px;}
 
-.title {font-size: 18px; margin-bottom: 50px;}
+/* global */
 
-.grey:hover {color: rgb(236, 236, 236);}
+#pdfTop, #errorsTop {
+    transition: width 0.3s ease-out!important; 
+}
 
