@@ -139,15 +139,11 @@
         <div id="insideLeftContain">
 
         <div id="leftButtons">
-            <span class="agh" id="agh3">Code</span><span>/users/user/path/to/filename1</span><div id="runcode"><div id="runbutton"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton1" class="runbutton"><img src="Images/stop_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="stop" id="runbutton2" class="runbutton"></div><div id="line2"></div><span id="runcodespan">Auto Run & Debug</span></div><img src="Images/sync_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="push code" id="push" onclick="parse()">           
+            <span class="agh" id="agh3">Code</span><span id="noFile">No File Selected</span><span id="pmlFilename"></span><div id="runcode"><div id="runbutton"><img src="Images/arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Run Code" id="runbutton1" class="runbutton"><img src="Images/stop_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="stop" id="runbutton2" class="runbutton"></div><div id="line2"></div><span id="runcodespan">Auto Run & Debug</span></div><img src="Images/sync_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="push code" id="push" onclick="parse()">           
         </div>
 
             <div id="editorContain">
-                <div id="editor" contenteditable="true">
-
-                       
-
-                </div>
+<div id="editor" contenteditable="true"></div>
             </div>
 
         </div>
@@ -163,7 +159,7 @@
         <div id="insideRightContain">
 
             <div id="rightButtons">
-                <div id="pdfTop" onclick="togglePrev('placeholder')"><span class="agh" id="agh1">Preview</span><span id="pdfPath">/users/user/path/to/filename2</span>
+                <div id="pdfTop" onclick="togglePrev('placeholder')"><span class="agh" id="agh1">Preview</span><span id="pdfPath">Untitled</span>
                     <div id="toolbarButton">
                         Toggle Menu
                     </div>
@@ -172,8 +168,8 @@
             </div>
 
             <div id="iframeContain">
-                <iframe id="placeholder" class="rightsidesizing" style="display: block;"></iframe>
-                <div id="debug" class="rightsidesizing" style="display: none;">Debug Panel</div>
+                <div id="placeholder" class="rightsidesizing" style="display: block;">Open file and create PDF by adding<code>[-- Page 1]</code>.</div>
+                <div id="debug" class="rightsidesizing" style="display: none;">No Issues</div>
             </div>
 
         </div>

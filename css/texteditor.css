@@ -16,7 +16,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 /* Opening Page */
                                                                     /**//**//**/
 #overlay {background-color: rgb(32, 32, 32); position: absolute; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
-.grey {color: rgb(174, 174, 174); cursor: pointer; display: flex; flex-direction: row; align-items: center; margin-top: 10px;}
+.grey {color: rgb(202, 202, 202); cursor: pointer; display: flex; flex-direction: row; align-items: center; margin-top: 15px;}
 .openingContain {display: flex; flex-direction: row; align-items: left; margin-top: 80px; padding: none; height: fit-content; width: fit-content;}
 .openingContain ul {padding: 0!important; list-style-type: none;}
 #openingRight {margin-left: 159px!important;}
@@ -51,7 +51,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 #homeText, #codeText, #downloadText, #saveAsText {margin: none;}
 .icon {border-radius: 1px; width: 100%; cursor: pointer; display: flex; flex-direction: column; align-items: center; padding-top: 7px; padding-bottom: 7px; position: relative; transition: width 0.1s ease!important;}
 /* Tooltip! */
-.textSizing {left: 100%; top: 50%; transform: translateY(-50%); margin-left: 10px; padding: 2px 6px; border-radius: 4px; font-size: 13px; white-space: nowrap; background-color: #333; position: absolute; color: white; display: none;} 
+.textSizing {left: 100%; top: 50%; transform: translateY(-50%); margin-left: 10px; padding: 4px 8px; border-radius: 4px; font-size: 13px; white-space: nowrap; background-color: #333; position: absolute; color: white; display: none; border:rgb(0, 0, 0) solid 1px;}
 .textSizing::after {content: ''; position: absolute; right: 100%; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right-color: #333;}
 
 #home {background-color: rgb(32, 32, 32);}
@@ -85,15 +85,15 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 #insideRightContain {position: relative; width: 100%; height: 100%;}
 #iframeContain {position: absolute; bottom: 0; left: 0; right: 0; top: 30px;}
 #rightButtons {position: absolute; top: 0; right: 0; left: 0; display: flex; width: 100%;}
-.rightsidesizing {width: 99%; height: 99%;}
+.rightsidesizing {width: 99%; height: 99%; display: flex; align-items: center; justify-content: center; color: white;}
 .agh {font-size: 17px!important; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif!important; margin-left: 5px!important; color: white!important;}
-#pdfTop {height: 30px; width: 70%; cursor: pointer; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453); color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; }
+#pdfTop {height: 30px; width: 70%; cursor: pointer; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453); color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; position: relative; }
 #pdfTop span {margin-left: 3vw}
 #agh1 {margin-left: 14px!important;} #agh2 {margin-left: 14px!important;}
 #errorsTop {height: 30px; cursor: pointer; width: 30%; background-color: rgb(16, 16, 16); border-left: 1px solid rgba(81, 81, 81, 0.453);  color: rgba(255, 255, 255, 0.641); font-size: 13px; display: flex; flex-direction: row; align-items: center; }
-#placeholder {border: none;}
+#placeholder {border: none; background-color: #333;}
 
-#toolbarButton {margin-left: 130px; display: flex; align-items: center; flex-direction: row;}
+#toolbarButton {right: 15px; display: flex; align-items: center; flex-direction: row; position: absolute;}
 
 /* Left */
 #pageleft {flex-grow: 1; min-width: 450px; height: 100%;}
@@ -106,14 +106,14 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 #editor {bottom: 0; left: 0; right: 0; top: 30px; position: absolute; outline: none; font-size: 13px; padding-top: 16px; padding-left: 18px; background-color: rgb(29, 29, 29); color: white; border: 1px solid rgba(81, 81, 81, 0.453); border-left: none; font-family: monospace; overflow-y: auto; white-space: pre; user-select: text; line-height: 18px;} 
 
 #runcode {height: 15px; background-color: rgb(32, 32, 32); color: white; display: flex; flex-direction: row; align-items: center; padding: 2px; padding-right: 2px; padding-left: 2px; border-radius: 3px; font-size: 13px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; border: 1px solid rgb(65, 65, 65); margin-left: 5vw;}
-.runbutton {height: 26px; margin: none; cursor: pointer; margin-top: 2px;}
+.runbutton {height: 26px; margin: none; cursor: pointer;}
 #line2 {height: 20px; width: 1px; background-color: rgb(65, 65, 65);}
 #runcodespan {margin-left: 8px!important; margin-right: 7px}
 #runbutton2 {display: none; margin-top: 1px!important;}
 
 #push {height: 20px; margin-left: 5px; cursor: pointer;}
 
-
+#noFile {text-decoration: underline; cursor: pointer;}
 /* global */
 
 #pdfTop, #errorsTop {

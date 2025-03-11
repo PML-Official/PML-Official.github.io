@@ -4,6 +4,7 @@ var blob;
 var isRealTimeEnabled = false; 
 var isToolbarHidden = false; 
 var editor; 
+var fileLoaded = false; 
 
 function parse() {
     doc = new PDFDocument();
@@ -49,17 +50,27 @@ function parse() {
 }
 
 function updateIframe() {
-    const iframe = document.getElementById("placeholder");
-    if (!iframe) {
-        console.error("Error: Placeholder iframe with ID 'placeholder' not found in the document.");
+    let placeholder = document.getElementById("placeholder");
+    if (!placeholder) {
+        console.error("Error: Placeholder element with ID 'placeholder' not found in the document.");
         return;
     }
     if (!blob) {
         console.warn("No PDF blob available to display.");
         return;
     }
+
+    // If placeholder is a div and a file is loaded, replace it with an iframe
+    if (placeholder.tagName.toLowerCase() === "div" && fileLoaded) {
+        const iframe = document.createElement("iframe");
+        iframe.id = "placeholder"; 
+        iframe.className = "rightsidesizing"; 
+        placeholder.parentNode.replaceChild(iframe, placeholder);
+        placeholder = iframe; 
+    }
+
     const url = URL.createObjectURL(blob) + (isToolbarHidden ? "#toolbar=0" : "");
-    iframe.src = url;
+    placeholder.src = url;
 }
 
 function download() {
@@ -123,20 +134,37 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Error: Toolbar button with ID 'toolbarButton' not found in the document.");
     }
 
-    // File loading functionality
     const dashOpen = document.getElementById("dashOpen");
     const fileInput = document.getElementById("fileInput");
     const overlay = document.getElementById("overlay");
-    if (dashOpen && fileInput) {
+    const noFile = document.getElementById("noFile");
+    
+    if (dashOpen && fileInput && noFile) {  
         dashOpen.addEventListener("click", () => {
             fileInput.click();
         });
+    
+        noFile.addEventListener("click", () => {
+            fileInput.click();
+        });
+    
         fileInput.addEventListener("change", () => {
             const file = fileInput.files[0];
+
+            if (file) {
+                const fileSizeKB = (file.size / 1024).toFixed(2);
+                noFile.innerText = `${file.name}`;
+                console.log("File name:", file.name);
+                console.log("File size:", fileSizeKB, "KB");
+                console.log("Last modified:", new Date(file.lastModified));
+                noFile.style.textDecoration = 'none';
+            }
+
             if (file && file.name.endsWith(".pml")) {
                 const reader = new FileReader();
                 reader.onload = function(event) {
                     editor.innerText = event.target.result;
+                    fileLoaded = true; 
                     parse(); 
                     overlay.style.display = 'none';
                 };
@@ -147,13 +175,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     } else {
-        console.error("Error: dashOpen or fileInput element not found in the document.");
+        console.error("Error: dashOpen, fileInput, or noFile element not found in the document.");
     }
-
-    if (editor) {
+    
+    if (editor && fileLoaded) {
         parse();
     } else {
-        console.error("Error: Initial parse skipped; editor not found.");
+        console.log("No file loaded yet; showing 'No PDF Loaded'.");
     }
 });
 

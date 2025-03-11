@@ -25,7 +25,7 @@ function enableHomeHover() {
     home.onmouseover = function() {
         if (overlay.style.display === 'none') {
             clearTimeout(homeTimeout);
-            home.style.backgroundColor = 'rgb(32, 32, 32)';
+            home.style.backgroundColor = 'rgb(27, 27, 27)';
             homeTimeout = setTimeout(() => {
                 if (overlay.style.display === 'none') {
                     homeText.style.display = 'block';
@@ -54,7 +54,7 @@ function enableButtonHover() {
     button.onmouseover = function() {
         if (overlay.style.display === 'flex' || overlay.style.display === '') {
             clearTimeout(buttonTimeout);
-            button.style.backgroundColor = 'rgb(32, 32, 32)';
+            button.style.backgroundColor = 'rgb(27, 27, 27)';
             buttonTimeout = setTimeout(() => {
                 if (overlay.style.display === 'flex' || overlay.style.display === '') {
                     codeText.style.display = 'block';
@@ -102,7 +102,7 @@ enableButtonHover();
 
 
 
-// Side Menu Hovering
+// Side Menu Hovering and Tooltips
 
 
 const saveas = document.getElementById('saveas');
@@ -121,7 +121,7 @@ saveas.onmouseover = function() {
     saveAsTimeout = setTimeout(() => {
         saveAsText.style.display = 'block';
     }, 1000);
-    saveas.style.backgroundColor = 'rgb(32, 32, 32)';
+    saveas.style.backgroundColor = 'rgb(27, 27, 27)';
 };
 saveas.onmouseout = function() {
     clearTimeout(saveAsTimeout);
@@ -137,7 +137,7 @@ download.onmouseover = function() {
     downloadTimeout = setTimeout(() => {
         downloadText.style.display = 'block';
     }, 1000);
-    download.style.backgroundColor = 'rgb(32, 32, 32)';
+    download.style.backgroundColor = 'rgb(27, 27, 27)';
 };
 download.onmouseout = function() {
     clearTimeout(downloadTimeout);
@@ -146,6 +146,7 @@ download.onmouseout = function() {
 };
 
 
+// Text Editor stuff
 
 
 
