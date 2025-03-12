@@ -26,6 +26,25 @@ function parse() {
 
     pdfWriter.writeMetadataProducer("PML (PDF Markup Language)");
 
+    //  Getting the PDF name for the dashboard
+    const pdfPath = document.getElementById("pdfPath");
+    let pdfTitle = "Untitled";
+    parser.tokens.forEach(tokenList => {
+        tokenList.forEach(t => {
+            if (t.id == TagIDs.META_NAME) {
+                pdfTitle = t.content + ".pdf";
+            }
+        });
+    });
+    if (pdfPath) {
+        pdfPath.innerText = pdfTitle;
+    } else {
+        console.error("Error: pdfTitle div not found in document");
+    };
+
+    pdfWriter.writeMetadataTitle(pdfTitle);
+
+
     parser.tokens.forEach(tokenList => {
         tokenList.forEach(t => {
             if (t.id == TagIDs.TEXT) {
@@ -138,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const fileInput = document.getElementById("fileInput");
     const overlay = document.getElementById("overlay");
     const noFile = document.getElementById("noFile");
+    const fileSize = document.getElementById("pmlFilesize");
     
     if (dashOpen && fileInput && noFile) {  
         dashOpen.addEventListener("click", () => {
@@ -153,12 +173,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (file) {
                 const fileSizeKB = (file.size / 1024).toFixed(2);
-                noFile.innerText = `${file.name}`;
+                noFile.innerText = `~/${file.name}`;
+                fileSize.innerText = `${fileSizeKB} kb`;
                 console.log("File name:", file.name);
                 console.log("File size:", fileSizeKB, "KB");
                 console.log("Last modified:", new Date(file.lastModified));
                 noFile.style.textDecoration = 'none';
+                fileSize.style.fontSize = '10px';
             }
+
+            noFile.onmouseover = function () {
+                noFile.style.textDecoration = 'underline';
+            };
+            noFile.onmouseout = function () {
+                noFile.style.textDecoration = 'none';
+            };
 
             if (file && file.name.endsWith(".pml")) {
                 const reader = new FileReader();

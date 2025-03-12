@@ -1,11 +1,11 @@
 /* Dashboard Top Navigation and Global Styles */
 #bodyDash {background-color: rgb(32, 32, 32);}
-#dashboardTop {height: 45px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center; position: absolute; z-index: 1000; right: 0; left: 0; border-bottom: 1px solid rgba(81, 81, 81, 0.453);}
+#dashboardTop {height: 45px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center; position: fixed; z-index: 1000; right: 0; left: 0; border-bottom: 1px solid rgba(81, 81, 81, 0.453);}
 #logoHeight {height: 40px!important; margin-left: 0!important; cursor: default!important;}
 #dashText {margin-left: 41px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 18px; color: white;}
 #line {width: 1px; height: 29px; background-color: white; margin-left: 39px;}
 
-#backtohome {height: 24px; transform: rotate(180deg); margin-left: 4vw; transition: all 0.3s ease; margin-right: 10px;}
+#backtohome {height: 24px; transform: rotate(180deg); margin-left: 90px; transition: all 0.3s ease; margin-right: 10px;}
 #backtohome:hover {height: 28px; cursor: pointer;}
 
 
@@ -15,7 +15,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 
 /* Opening Page */
                                                                     /**//**//**/
-#overlay {background-color: rgb(32, 32, 32); position: absolute; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
+#overlay {background-color: rgb(32, 32, 32); position: fixed; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
 .grey {color: rgb(202, 202, 202); cursor: pointer; display: flex; flex-direction: row; align-items: center; margin-top: 15px;}
 .openingContain {display: flex; flex-direction: row; align-items: left; margin-top: 80px; padding: none; height: fit-content; width: fit-content;}
 .openingContain ul {padding: 0!important; list-style-type: none;}
@@ -61,7 +61,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 
 .circle {height: 9px; width: 9px; border-radius: 50%; background-color: rgb(188, 15, 15); top: 6px; position: absolute; right: 7px;}
 
-#sidebar {position: absolute; left: 0; top: 0; bottom: 0; width: 45px; background-color: rgb(16, 16, 16); border-right: 1px solid rgba(81, 81, 81, 0.453); z-index: 100000; display: flex; flex-direction: column; align-items: center;}
+#sidebar {position: fixed; left: 0; top: 0; bottom: 0; width: 45px; background-color: rgb(16, 16, 16); border-right: 1px solid rgba(81, 81, 81, 0.453); z-index: 100000; display: flex; flex-direction: column; align-items: center;}
 
 
 
@@ -114,6 +114,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 #push {height: 20px; margin-left: 5px; cursor: pointer;}
 
 #noFile {text-decoration: underline; cursor: pointer;}
+#pmlFilesize {margin-left: 10px!important; margin-top: 4px!important;}
 /* global */
 
 #pdfTop, #errorsTop {

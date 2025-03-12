@@ -101,6 +101,17 @@ home.addEventListener('click', () => {
 enableButtonHover();
 
 
+/// overflow stuff
+
+if (overflow.style.display === 'block') {
+    document.getElementById("body").style.overflow = "none";
+    console.log('Body overflow off');
+} else {
+    document.getElementById("body").style.overflow = '';
+    console.log('Body overflow On');
+};
+
+
 
 // Side Menu Hovering and Tooltips
 
