@@ -1,14 +1,29 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "name": "Run Flask with Dash",
+            "type": "debugpy",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "/Users/asherlessem/Desktop/PML-Official.github.io/index.html"
+            "program": "${workspaceFolder}/python/python.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "FLASK_ENV": "development"
+            },
+            "postDebugTask": "openBrowser"
+        }
+    ],
+    "tasks": [
+        {
+            "label": "openBrowser",
+            "type": "shell",
+            "command": "open http://127.0.0.1:5000",
+            "dependsOn": "Run Flask with Dash",
+            "group": "none",
+            "presentation": {
+                "reveal": "silent"
+            }
         }
     ]
 }
