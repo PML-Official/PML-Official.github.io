@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/texteditor.css">
         <link rel="stylesheet" href="css/tooltips.css">
+        <link rel="stylesheet" href="css/loading.css">
+
         <link rel="icon" type="image/png" href="Images/PML White.png">
 
         <meta charset="UTF-8">
@@ -20,12 +22,74 @@
         <meta property="og:image" content="https://pml-official.github.io/Images/PML%20White.png">
         <meta property="og:url" content="https://pml-official.github.io/">
         <meta property="og:type" content="website">
-
+        <!-- Loading Bar -->
+        <style>
+            #loading-bar {
+              position: fixed;
+              top: 44px;
+              left: 0;
+              height: 3px;
+              width: 5%;
+              background-color: #008cff;
+              z-index: 10000;
+              transition: width linear 0.3s, opacity 0.3s ease;
+              opacity: 1;
+            }
+          
+            #loading-bar.hidden {
+              opacity: 0;
+            }
+          </style>
+          
+          <script>
+            (function () {
+              const injectBar = () => {
+                // Create or reset bar
+                let loadingBar = document.getElementById('loading-bar');
+                if (loadingBar) loadingBar.remove(); // ensure clean slate
+          
+                loadingBar = document.createElement('div');
+                loadingBar.id = 'loading-bar';
+                document.body.insertBefore(loadingBar, document.body.firstChild);
+          
+                let progress = 5; // Start at 5%
+                const max = 90;
+                const speed = 0.5;
+                const interval = setInterval(() => {
+                  if (progress < max) {
+                    progress += speed;
+                    loadingBar.style.width = progress + '%';
+                  } else {
+                    clearInterval(interval);
+                  }
+                }, 16);
+          
+                window.addEventListener('load', () => {
+                  clearInterval(interval);
+                  loadingBar.style.width = '100%';
+                  setTimeout(() => {
+                    loadingBar.classList.add('hidden');
+                    setTimeout(() => {
+                      loadingBar.remove(); // This resets it for the next page load
+                    }, 300);
+                  }, 300);
+                });
+              };
+          
+              // Ensure body is ready
+              if (document.body) {
+                injectBar();
+              } else {
+                document.addEventListener('DOMContentLoaded', injectBar);
+              }
+            })();
+          </script>
+          <!-- /Loading Bar -->
+          
     </head>
     <body id="bodyDash">
-           
-       
 
+        <div id="loading-bar"></div>
 
 
 <!-- Sidebar  -->
@@ -111,16 +175,17 @@
 
 <!-- Dashboard Top Navigation -->
          <div id="dashboardTop">
-            <img src="Images/double_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="backtohome-logo" id="backtohome">
-            <div class="textSizing-bottom" id="backtohomeText">Leave Dashboard</div>
+            <div>
+                <img src="Images/double_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="backtohome-logo" id="backtohome">
+                <div class="textSizing-bottom" id="backtohomeText">Leave Dashboard</div>
+            </div>
                     <img src="Images/PML White.png" alt="pml-logo" class="logo" id="logoHeight">
                     <div id="line"></div>
                     <div id="dashText">
                         Dashboard
                     </div>
-                       
-
         </div>
+
 
          
     
@@ -247,6 +312,7 @@
                 document.getElementById('errorsTop').style.transition = 'width 0.3s ease-in-out';
             };
             </script>
+            
 
     </body>
 </html>

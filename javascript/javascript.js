@@ -7,7 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
         logo1.addEventListener('click', () => {
             window.location.href = 'https://pml-official.github.io';
         });
-    
-});
 
-            
+
+
+
+
+
+        //  Loading Bar
+
+        
+         
+
+
+        });
+    

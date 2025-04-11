@@ -15,7 +15,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 
 /* Opening Page */
                                                                     /**//**//**/
-#overlay {background-color: rgb(32, 32, 32); position: fixed; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 10000; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
+#overlay {background-color: rgb(32, 32, 32); position: fixed; display: none; top: 46px; bottom: 0; right: 0; left: 45px; z-index: 100; opacity: 1; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; color: white;}
 .grey {color: rgb(202, 202, 202); cursor: pointer; display: flex; flex-direction: row; align-items: center; margin-top: 15px;}
 .openingContain {display: flex; flex-direction: row; align-items: left; margin-top: 80px; padding: none; height: fit-content; width: fit-content;}
 .openingContain ul {padding: 0!important; list-style-type: none;}
