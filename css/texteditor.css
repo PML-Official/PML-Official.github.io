@@ -1,11 +1,11 @@
 /* Dashboard Top Navigation and Global Styles */
 #bodyDash {background-color: rgb(32, 32, 32);}
-#dashboardTop {height: 45px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center; position: fixed; z-index: 1000; right: 0; left: 0; border-bottom: 1px solid rgba(81, 81, 81, 0.453);}
+#dashboardTop {height: 45px; background-color: rgb(16, 16, 16); display: flex; flex-wrap: column; align-items: center; position: relative; z-index: 1000; right: 0; left: 0; border-bottom: 1px solid rgba(81, 81, 81, 0.453);}
 #logoHeight {height: 40px!important; margin-left: 0!important; cursor: default!important;}
 #dashText {margin-left: 41px; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 18px; color: white;}
 #line {width: 1px; height: 29px; background-color: white; margin-left: 39px;}
 
-#backtohome {height: 24px; transform: rotate(180deg); margin-left: 90px; transition: all 0.3s ease; margin-right: 10px;}
+#backtohome {height: 24px; transform: rotate(180deg); margin-left: 90px; transition: all 0.3s ease; margin-right: 10px; position: relative;}
 #backtohome:hover {height: 28px; cursor: pointer;}
 
 
@@ -50,9 +50,7 @@ code {padding: 1px; margin-left: 5px; margin-right: 5px; background-color: rgb(4
 #home, #saveas, #download, #code {z-index: 100001;}
 #homeText, #codeText, #downloadText, #saveAsText {margin: none;}
 .icon {border-radius: 1px; width: 100%; cursor: pointer; display: flex; flex-direction: column; align-items: center; padding-top: 7px; padding-bottom: 7px; position: relative; transition: width 0.1s ease!important;}
-/* Tooltip! */
-.textSizing {left: 100%; top: 50%; transform: translateY(-50%); margin-left: 10px; padding: 4px 8px; border-radius: 4px; font-size: 13px; white-space: nowrap; background-color: #333; position: absolute; color: white; display: none; border:rgb(0, 0, 0) solid 1px;}
-.textSizing::after {content: ''; position: absolute; right: 100%; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right-color: #333;}
+
 
 #home {background-color: rgb(32, 32, 32);}
 

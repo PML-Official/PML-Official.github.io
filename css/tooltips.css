@@ -1,1 +1,11 @@
- 
+ /* Tooltip  Right Side */
+.textSizing {left: 100%; top: 50%; transform: translateY(-50%); margin-left: 5px; margin-top: 5px; padding: 4px 12px; border-radius: 4px; font-size: 13px; white-space: nowrap; background-color: #0f0f0f; border: 1px solid #333; position: absolute; color: white; display: none;}
+
+/*  Tooltip Left Side */
+.textSizing-left {right: 100%; top: 50%; transform: translateY(-50%); margin-right: 5px; margin-top: 5px;padding: 4px 12px;border-radius: 4px; font-size: 13px; white-space: nowrap; background-color: #0f0f0f; border: 1px solid #333; position: absolute; color: white; display: none;}
+
+/*  Tooltip Bottom */
+.textSizing-bottom {top: 100%; left: 50%; transform: translateX(-50%); margin-top: 30px; margin-left: 5px; padding: 4px 12px; border-radius: 4px; font-size: 13px; white-space: nowrap; background-color: #0f0f0f; border: 1px solid #333; position: absolute; color: white; display: block; }
+
+/*  Tooltip Top */
+.textSizing-top { bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 5px; margin-left: 5px; padding: 4px 12px; border-radius: 4px; font-size: 13px; white-space: nowrap; background-color: #0f0f0f; border: 1px solid #333; position: absolute; color: white; display: none; }

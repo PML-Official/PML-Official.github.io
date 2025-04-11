@@ -166,17 +166,4 @@ download.onmouseout = function() {
 
 
 
-
-
-
-
-  
-
-
-
-
-
-
-
-
 });
