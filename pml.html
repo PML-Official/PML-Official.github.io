@@ -135,7 +135,7 @@
 
         </div>
 
-<!-- Overlay -->
+<!-- Opening Page -->
         <div id="overlay">
             <img src="Images/PML White.png" alt="PML Logo" id="dashHomeLogo"/>
             <div id="welcome">PDF Markup Langauge</div>
@@ -144,27 +144,33 @@
                     <ul>
                         <li class="title">
                             Getting Started
+                            <div class="underline" id="underline1"></div>
                         </li>
+                        <div id="hoverleft">
                         <li class="grey" id="dashCreate">
-                            <span>~ Create New File</span>
+                            <span>Create New File</span>
                         </li>
                         <input type="file" id="fileInput" accept=".pml" style="display: none;">
                         <li class="grey" id="dashOpen">
-                            <span>~ Open Existing File</span>
+                            <span>Open Existing File</span>
                         </li>
+                        </div>
                     </ul>
                 </div>
                 <div id="openingRight" class="openingContain">
                     <ul>
                         <li class="title">
                             Recents
+                            <div class="underline" id="underline2"></div>
                         </li>
-                        <li class="grey">
-                            example.pml
+                        <div id="hoverright">
+                        <li class="grey" id="example1">
+                           ~/example.pml
                         </li> 
-                        <li class="grey">
-                            test.pml 
+                        <li class="grey" id="example2">
+                           ~/test.pml 
                         </li>
+                        </div>
                     </ul>     
                 </div>
             </div>
@@ -269,49 +275,7 @@
 
 
         <!-- Don't Delete-->
-        <script>
-            function togglePrev(divId) {
-                const placeholder = document.getElementById('placeholder');
-                const debug = document.getElementById('debug');
-                const pdfTop = document.getElementById('pdfTop');
-                const errorsTop = document.getElementById('errorsTop');
-                const pdfPath = document.getElementById('pdfPath');
-                const toolbarButton = document.getElementById('toolbarButton');
-            
-                placeholder.style.display = 'none';
-                debug.style.display = 'none';
-            
-                pdfTop.style.backgroundColor = '';
-                errorsTop.style.backgroundColor = '';
-            
-                const targetDiv = document.getElementById(divId);
-                targetDiv.style.display = 'block';
-            
-                pdfTop.style.transition = 'width 0.3s ease-out';
-                errorsTop.style.transition = 'width 0.3s ease-out';
-            
-                if (divId === 'placeholder') {
-                    pdfTop.style.backgroundColor = 'rgb(32, 32, 32)';
-                    pdfTop.style.width = '70%';
-                    errorsTop.style.width = '30%';
-                    pdfPath.style.display = 'block';
-                    toolbarButton.style.display = 'block';
-                } else if (divId === 'debug') {
-                    errorsTop.style.backgroundColor = 'rgb(32, 32, 32)';
-                    errorsTop.style.width = '70%';
-                    pdfTop.style.width = '30%';
-                    pdfPath.style.display = 'none';
-                    toolbarButton.style.display = 'none';
-                }
-            }
-            
-            window.onload = function () {
-                const pdfTop = document.getElementById('pdfTop');
-                pdfTop.style.backgroundColor = 'rgb(32, 32, 32)';
-                pdfTop.style.transition = 'width 0.3s ease-out';
-                document.getElementById('errorsTop').style.transition = 'width 0.3s ease-in-out';
-            };
-            </script>
+    
             
 
     </body>

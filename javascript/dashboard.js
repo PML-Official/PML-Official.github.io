@@ -87,12 +87,16 @@ button.addEventListener('click', () => {
     enableHomeHover();
     disableButtonHover();
     button.style.backgroundColor = 'rgb(32, 32, 32)';
+    button.style.borderLeft = '3px solid red';
+    home.style.borderLeft = '3px solid transparent';
 });
 
 home.addEventListener('click', () => {
     overlay.style.display = 'flex';
     home.style.backgroundColor = '';
     button.style.backgroundColor = '';
+    button.style.borderLeft = '3px solid transparent';
+    home.style.borderLeft = '3px solid red';
     disableHomeHover();
     enableButtonHover();
 });
@@ -120,8 +124,10 @@ const saveas = document.getElementById('saveas');
 const download = document.getElementById('download');
 
 const downloadText = document.getElementById('downloadText');
+/*
 const openText = document.getElementById('openText');
 const newText = document.getElementById('newText');
+*/
 const saveAsText = document.getElementById('saveAsText');
 
 
@@ -157,13 +163,74 @@ download.onmouseout = function() {
 };
 
 
-// Text Editor stuff
-
-
-
-
-
-
-
-
 });
+
+
+//   Opening Page animaions
+
+const line1 = document.getElementById('underline1');
+const line2 = document.getElementById('underline2');
+
+const hoverleft = document.getElementById('hoverleft');
+const hoverright = document.getElementById('hoverright');
+
+hoverleft.addEventListener('mouseover', () => {
+    line1.style.width = '77px';
+});
+
+hoverleft.addEventListener('mouseout', () => {
+    line1.style.width = '57px';
+});
+
+
+hoverright.addEventListener('mouseover', () => {
+    line2.style.width = '77px';
+});
+
+hoverright.addEventListener('mouseleave', () => {
+    line2.style.width = '57px';
+});
+
+//  PDF/Debug toggle
+
+function togglePrev(divId) {
+    const placeholder = document.getElementById('placeholder');
+    const debug = document.getElementById('debug');
+    const pdfTop = document.getElementById('pdfTop');
+    const errorsTop = document.getElementById('errorsTop');
+    const pdfPath = document.getElementById('pdfPath');
+    const toolbarButton = document.getElementById('toolbarButton');
+
+    placeholder.style.display = 'none';
+    debug.style.display = 'none';
+
+    pdfTop.style.backgroundColor = '';
+    errorsTop.style.backgroundColor = '';
+
+    const targetDiv = document.getElementById(divId);
+    targetDiv.style.display = 'block';
+
+    pdfTop.style.transition = 'width 0.3s ease-out';
+    errorsTop.style.transition = 'width 0.3s ease-out';
+
+    if (divId === 'placeholder') {
+        pdfTop.style.backgroundColor = 'rgb(32, 32, 32)';
+        pdfTop.style.width = '70%';
+        errorsTop.style.width = '30%';
+        pdfPath.style.display = 'block';
+        toolbarButton.style.display = 'block';
+    } else if (divId === 'debug') {
+        errorsTop.style.backgroundColor = 'rgb(32, 32, 32)';
+        errorsTop.style.width = '70%';
+        pdfTop.style.width = '30%';
+        pdfPath.style.display = 'none';
+        toolbarButton.style.display = 'none';
+    }
+}
+
+window.onload = function () {
+    const pdfTop = document.getElementById('pdfTop');
+    pdfTop.style.backgroundColor = 'rgb(32, 32, 32)';
+    pdfTop.style.transition = 'width 0.3s ease-out';
+    document.getElementById('errorsTop').style.transition = 'width 0.3s ease-in-out';
+};
